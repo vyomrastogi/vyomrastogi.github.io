@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Blog on VR</title>
+    <link>/</link>
+    <description>Recent content in A Blog on VR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 07 Jun 2020 12:47:16 -0400</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Internet</title>
+      <link>/be-developer-roadmap/internet-basics/internet/</link>
+      <pubDate>Sun, 07 Jun 2020 12:47:16 -0400</pubDate>
+      
+      <guid>/be-developer-roadmap/internet-basics/internet/</guid>
+      <description>What is Internet? Internet is global network of billions of electronic devices and computer. It is possible to access almost any information, communicate wit anyone in world using internet.
+How does Internet work? Internet is global network of physical cables/optical fibres which directly/indirectly connect all the electronice devices.</description>
+    </item>
+    
+    <item>
+      <title>DNS</title>
+      <link>/be-developer-roadmap/internet-basics/dns/</link>
+      <pubDate>Sun, 07 Jun 2020 12:47:16 -0400</pubDate>
+      
+      <guid>/be-developer-roadmap/internet-basics/dns/</guid>
+      <description>What is DNS and how it works? DNS : Domain Naming System All the electonice devices connected to internet communicate to each other via a sequence of numbers called ipaddresses. Since it&amp;rsquo;s difficult for humans to remember these IPAddresses, there is a central server which translates the requested resource name to an ip address. It&amp;rsquo;s like a phonebook with domain name and ipaddresses.
+Types of DNS Servers  DNS Recursive servers  These are provided by ISP provider (internet providers), which assign an ipaddress to one&amp;rsquo;s machine.</description>
+    </item>
+    
+    <item>
+      <title>Browsers</title>
+      <link>/be-developer-roadmap/internet-basics/browsers/</link>
+      <pubDate>Sun, 07 Jun 2020 12:47:16 -0400</pubDate>
+      
+      <guid>/be-developer-roadmap/internet-basics/browsers/</guid>
+      <description>What are browsers and how do they work? A browser is an application which helps user to view a website.
+It mainly consists of
+ User Interface [the UI of a browser which lets user enter a webaddress, refresh etc] Rendering Engine  The engine where DOM is converted to a webpage as we see it This layer is responsible for making all network requests, parse the html and request for more resources required   Browser Engine [Maintains communication between Browser UI and Rendering Engine] Network [To get data from various sources] Javascript Interpretor  It provides interpretor for javascript which is used to provide various interactive features on the webpage   Data Storage [for storing cache,cookies, history etc]  </description>
+    </item>
+    
+  </channel>
+</rss>

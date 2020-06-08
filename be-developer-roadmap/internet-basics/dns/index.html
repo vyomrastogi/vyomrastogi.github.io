@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="description" content="">
+<meta name="author" content="Vyom Rastogi">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>DNS :: VR</title>
+
+    
+    <link href="/css/nucleus.css?1591594967" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1591594967" rel="stylesheet">
+    <link href="/css/hybrid.css?1591594967" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1591594967" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1591594967" rel="stylesheet">
+    <link href="/css/auto-complete.css?1591594967" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1591594967" rel="stylesheet">
+    <link href="/css/theme.css?1591594967" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1591594967" rel="stylesheet">
+    
+    <link href="/css/theme-blue.css?1591594967" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1591594967"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/be-developer-roadmap/internet-basics/dns/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      
+<a id="logo" href="/">
+    <img src="/images/favicon.png" width="50" height="50">
+</a>
+    </div>
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/be-developer-roadmap/" title="Introduction" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/be-developer-roadmap/">
+          <b>1. </b>Backend Developer Journey
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/be-developer-roadmap/internet-basics/" title="Basic Concepts around Internet" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/be-developer-roadmap/internet-basics/">
+          Internet &amp; Etc.
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/be-developer-roadmap/internet-basics/internet/" title="Internet" class="dd-item ">
+        <a href="/be-developer-roadmap/internet-basics/internet/">
+        Internet
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item active">
+        <a href="/be-developer-roadmap/internet-basics/dns/">
+        DNS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/be-developer-roadmap/internet-basics/browsers/" title="Browsers" class="dd-item ">
+        <a href="/be-developer-roadmap/internet-basics/browsers/">
+        Browsers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>A Blog</a> > <a href='/be-developer-roadmap/'>Introduction</a> > <a href='/be-developer-roadmap/internet-basics/'>Basic Concepts around Internet</a> > DNS
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-is-dns-and-how-it-works">What is DNS and how it works?</a></li>
+        <li><a href="#what-is-domain-name">What is Domain Name?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              DNS
+            </h1>
+          
+
+        
+
+
+<h3 id="what-is-dns-and-how-it-works">What is DNS and how it works?</h3>
+<p><strong>DNS</strong> : Domain Naming System
+All the electonice devices connected to internet communicate to each other via a sequence of numbers called ipaddresses.
+Since it&rsquo;s difficult for humans to remember these IPAddresses, there is a central server which translates the requested resource name to an ip address.
+It&rsquo;s like a phonebook with domain name and ipaddresses.</p>
+<h5 id="types-of-dns-servers">Types of DNS Servers</h5>
+<ul>
+<li>DNS Recursive servers
+<ul>
+<li>These are provided by ISP provider (internet providers), which assign an ipaddress to one&rsquo;s machine.</li>
+</ul>
+</li>
+<li>The request is then forwarded to Naming server. Types of Naming servers
+<ul>
+<li>Root Name Server</li>
+<li>TLD name server</li>
+<li>Authoritative name server</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-domain-name">What is Domain Name?</h3>
+<p>Domain name is the address of the website. Each website has an ipaddress assigned to it which is it&rsquo;s unique address. When a address like &lsquo;google.com&rsquo; is entered in browser, the domain is translated in DNS server to ipaddress and routed to correct servers.
+Domain Name is similar to saving the home residential address of &ldquo;123 Street W, City 180004&rdquo; as &ldquo;Home&rdquo; in the phone.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/be-developer-roadmap/internet-basics/internet/" title="Internet"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/be-developer-roadmap/internet-basics/browsers/" title="Browsers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1591594967"></script>
+    <script src="/js/perfect-scrollbar.min.js?1591594967"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1591594967"></script>
+    <script src="/js/jquery.sticky.js?1591594967"></script>
+    <script src="/js/featherlight.min.js?1591594967"></script>
+    <script src="/js/highlight.pack.js?1591594967"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1591594967"></script>
+    <script src="/js/learn.js?1591594967"></script>
+    <script src="/js/hugo-learn.js?1591594967"></script>
+
+    <link href="/mermaid/mermaid.css?1591594967" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1591594967"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
