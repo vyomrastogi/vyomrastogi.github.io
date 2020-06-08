@@ -6,7 +6,7 @@
     <description>Recent content in A Blog on VR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 07 Jun 2020 12:47:16 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 23:54:22 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,16 @@ Types of DNS Servers  DNS Recursive servers  These are provided by ISP provider 
       <description>What are browsers and how do they work? A browser is an application which helps user to view a website.
 It mainly consists of
  User Interface [the UI of a browser which lets user enter a webaddress, refresh etc] Rendering Engine  The engine where DOM is converted to a webpage as we see it This layer is responsible for making all network requests, parse the html and request for more resources required   Browser Engine [Maintains communication between Browser UI and Rendering Engine] Network [To get data from various sources] Javascript Interpretor  It provides interpretor for javascript which is used to provide various interactive features on the webpage   Data Storage [for storing cache,cookies, history etc]  </description>
+    </item>
+    
+    <item>
+      <title>Http</title>
+      <link>/be-developer-roadmap/internet-basics/http/</link>
+      <pubDate>Sun, 07 Jun 2020 23:54:22 -0400</pubDate>
+      
+      <guid>/be-developer-roadmap/internet-basics/http/</guid>
+      <description>What is HTTP? HyperText Transfer Protocol
+ Client/Server model or request/response model Stateless a lot of application maintain state via session/cookie Application Layer internally uses TCP protocol. TCP defines how the data is read/decoded Client Action (GET, PUT/POST, DELETE, PATCH) Server Status Codes Headers  </description>
     </item>
     
   </channel>
