@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>DNS :: VR</title>
+    <title>Basics :: VR</title>
 
     
     <link href="/css/nucleus.css?1593392069" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/be-developer-roadmap/internet-basics/dns/">
+  <body class="" data-url="/java-related/basics/">
     <nav id="sidebar" class="">
 
 
@@ -65,7 +65,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/internet-basics/" title="Basic Concepts around Internet" class="dd-item 
-        parent
+        
         
         
         ">
@@ -141,7 +141,7 @@
  
   
     
-      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item active">
+      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item ">
         <a href="/be-developer-roadmap/internet-basics/dns/">
         DNS
         
@@ -221,7 +221,7 @@
   
     
     <li data-nav-id="/java-related/" title="Java Related" class="dd-item 
-        
+        parent
         
         
         ">
@@ -247,7 +247,7 @@
  
   
     
-      <li data-nav-id="/java-related/basics/" title="Basics" class="dd-item ">
+      <li data-nav-id="/java-related/basics/" title="Basics" class="dd-item active">
         <a href="/java-related/basics/">
         Basics
         
@@ -370,13 +370,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>A Blog</a> > <a href='/be-developer-roadmap/'>Introduction</a> > <a href='/be-developer-roadmap/internet-basics/'>Basic Concepts around Internet</a> > DNS
-          
-        
+            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Basics
           
         
           
@@ -393,8 +387,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#what-is-dns-and-how-it-works">What is DNS and how it works?</a></li>
-        <li><a href="#what-is-domain-name">What is Domain Name?</a></li>
+        <li><a href="#java">Java</a></li>
       </ul>
     </li>
   </ul>
@@ -414,36 +407,82 @@
           
             <h1>
               
-              DNS
+              Basics
             </h1>
           
 
         
 
 
-<h3 id="what-is-dns-and-how-it-works">What is DNS and how it works?</h3>
-<p><strong>DNS</strong> : Domain Naming System
-All the electonice devices connected to internet communicate to each other via a sequence of numbers called ipaddresses.
-Since it&rsquo;s difficult for humans to remember these IPAddresses, there is a central server which translates the requested resource name to an ip address.
-It&rsquo;s like a phonebook with domain name and ipaddresses.</p>
-<h5 id="types-of-dns-servers">Types of DNS Servers</h5>
+<h3 id="java">Java</h3>
+<p>Java is a high level programming language. Main characteristics include</p>
 <ul>
-<li>DNS Recursive servers
+<li>robust</li>
+<li>secure</li>
+<li>platform/os independent</li>
+<li>object-oriented</li>
+<li>multi-threaded</li>
+<li>portable (read-once-write-anywhere) etc.</li>
+</ul>
+<p>Java requires both <em>compiler</em> and <em>interpretor</em> to run.</p>
+<p>The compiler converts the source code into byte code. The interpretor interprets this bytecode and excutes the application/logic. Since java is interpreted language, it is platform independent</p>
+<p><strong>Java Virtual Machine</strong> or <em>JVM</em> provides an environment to support execution of java bytecode. It compiles a <em>.java</em> file to <em>.class</em> which contains byte code understandable by the machine.
+It is a specification which must be implemented by computer system.</p>
+<h4 id="jvm-architecture">JVM Architecture</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        Classloader
+            <span style="color:#f92672">|</span>
+  Allocated Memory Locations
+   <span style="color:#f92672">|</span>    <span style="color:#f92672">|</span>     <span style="color:#f92672">|</span>     <span style="color:#f92672">|</span>     <span style="color:#f92672">|</span>
+<span style="color:#f92672">|--------------------------------|</span>
+<span style="color:#f92672">|</span>Class Heap Stack Native Program <span style="color:#f92672">|</span>
+<span style="color:#f92672">|</span>Area             Method Counter <span style="color:#f92672">|</span>
+<span style="color:#f92672">|</span>                 Stack  Register<span style="color:#f92672">|</span>
+<span style="color:#f92672">|--------------------------------|</span> 
+            <span style="color:#f92672">|</span>
+      Execution Engine
+            <span style="color:#f92672">|</span>
+    Native Method Interface
+            <span style="color:#f92672">|</span>
+       Java Libraries
+
+</code></pre></div><h4 id="jvm-memory-types">JVM Memory Types</h4>
 <ul>
-<li>These are provided by ISP provider (internet providers), which assign an ipaddress to one&rsquo;s machine.</li>
+<li><strong>Class Area</strong> : It is used to store the each classes structures like runtime constant pool, fields, method data and code for methods</li>
+<li><strong>Heap</strong> : It is memory area in which objects are allocated memory and stored</li>
+<li><strong>Stack</strong> : Java stack stores frames. It contains partial results and local variables. Each threads spawns its own jvm stack which contain variables related to that thread. The frame is terminated once the thread execution is completed</li>
+<li><strong>Native Method Stack</strong> : For all the native methods used in the application</li>
+<li><strong>Program Counter Register</strong> : it contains the address of jvm instructions being executed.</li>
 </ul>
-</li>
-<li>The request is then forwarded to Naming server. Types of Naming servers
+<p>For Example, in a given program</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> rollNo<span style="color:#f92672">;</span>
+    String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">static</span> String college <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;University&#34;</span><span style="color:#f92672">;</span>
+    Student<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> rollNo<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rollNo</span> <span style="color:#f92672">=</span> rollNo<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;RollNo: %s, Name:%s, College:%s \n&#34;</span><span style="color:#f92672">,</span>rollNo<span style="color:#f92672">,</span> name<span style="color:#f92672">,</span> college<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>       
+        Student s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>57<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Tony&#34;</span><span style="color:#f92672">);</span>
+        Student s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>60<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Peter&#34;</span><span style="color:#f92672">);</span>
+        s1<span style="color:#f92672">.</span><span style="color:#a6e22e">display</span><span style="color:#f92672">();</span>
+        s2<span style="color:#f92672">.</span><span style="color:#a6e22e">display</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>static String college</code> is stored in Class Area.</p>
+<p><code>Student object s1 and s2</code> are stored in Java Stack, s2 being at top (First in Last out).</p>
+<p>Object attributes <code>rollNo and name</code> are stored in Heap memory.</p>
+<h4 id="classloader">Classloader</h4>
+<p>A classloader is subsystem of a JVM. Whenever a java program is executed, it is first loaded by classloader</p>
 <ul>
-<li>Root Name Server</li>
-<li>TLD name server</li>
-<li>Authoritative name server</li>
+<li><strong>Bootstrap ClassLoader</strong> : The first classloader which loads <code>rt.jar</code> files. The jar contains basic standard edition files.</li>
+<li><strong>Extension ClassLoader</strong> : It loads the jar files located at <code>$JAVA_HOME/jre/lib/ext</code> directory</li>
+<li><strong>Application ClassLoader</strong> : It loads all the class files in classpath.</li>
 </ul>
-</li>
-</ul>
-<h3 id="what-is-domain-name">What is Domain Name?</h3>
-<p>Domain name is the address of the website. Each website has an ipaddress assigned to it which is it&rsquo;s unique address. When a address like &lsquo;google.com&rsquo; is entered in browser, the domain is translated in DNS server to ipaddress and routed to correct servers.
-Domain Name is similar to saving the home residential address of &ldquo;123 Street W, City 180004&rdquo; as &ldquo;Home&rdquo; in the phone.</p>
 
 
 <footer class="footline">
@@ -481,6 +520,8 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -497,7 +538,6 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
-                    
                 
                 
 
@@ -510,26 +550,6 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -547,8 +567,21 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -588,6 +621,7 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                    
                 
                 
 
@@ -600,6 +634,7 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
             
                 
+                    
                     
                 
                 
@@ -619,6 +654,9 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -656,10 +694,10 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
 	 
 	 
 		
-			<a class="nav nav-prev" href="/be-developer-roadmap/internet-basics/internet/" title="Internet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/java-related/" title="Java Related"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/be-developer-roadmap/internet-basics/browsers/" title="Browsers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/things-i-learnt/" title="Things I Learnt" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

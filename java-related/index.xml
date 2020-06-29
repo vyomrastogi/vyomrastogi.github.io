@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java Related on VR</title>
+    <link>/java-related/</link>
+    <description>Recent content in Java Related on VR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 28 Jun 2020 20:17:07 -0400</lastBuildDate>
+    
+	<atom:link href="/java-related/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Basics</title>
+      <link>/java-related/basics/</link>
+      <pubDate>Sun, 28 Jun 2020 20:19:10 -0400</pubDate>
+      
+      <guid>/java-related/basics/</guid>
+      <description>Java Java is a high level programming language. Main characteristics include
+ robust secure platform/os independent object-oriented multi-threaded portable (read-once-write-anywhere) etc.  Java requires both compiler and interpretor to run.
+The compiler converts the source code into byte code. The interpretor interprets this bytecode and excutes the application/logic. Since java is interpreted language, it is platform independent
+Java Virtual Machine or JVM provides an environment to support execution of java bytecode.</description>
+    </item>
+    
+  </channel>
+</rss>

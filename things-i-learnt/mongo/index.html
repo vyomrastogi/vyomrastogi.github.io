@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>DNS :: VR</title>
+    <title>Mongo :: VR</title>
 
     
     <link href="/css/nucleus.css?1593392069" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/be-developer-roadmap/internet-basics/dns/">
+  <body class="" data-url="/things-i-learnt/mongo/">
     <nav id="sidebar" class="">
 
 
@@ -65,7 +65,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/internet-basics/" title="Basic Concepts around Internet" class="dd-item 
-        parent
+        
         
         
         ">
@@ -141,7 +141,7 @@
  
   
     
-      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item active">
+      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item ">
         <a href="/be-developer-roadmap/internet-basics/dns/">
         DNS
         
@@ -276,7 +276,7 @@
   
     
     <li data-nav-id="/things-i-learnt/" title="Things I Learnt" class="dd-item 
-        
+        parent
         
         
         ">
@@ -302,7 +302,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/mongo/" title="Mongo" class="dd-item ">
+      <li data-nav-id="/things-i-learnt/mongo/" title="Mongo" class="dd-item active">
         <a href="/things-i-learnt/mongo/">
         Mongo
         
@@ -370,13 +370,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>A Blog</a> > <a href='/be-developer-roadmap/'>Introduction</a> > <a href='/be-developer-roadmap/internet-basics/'>Basic Concepts around Internet</a> > DNS
-          
-        
+            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > Mongo
           
         
           
@@ -393,8 +387,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#what-is-dns-and-how-it-works">What is DNS and how it works?</a></li>
-        <li><a href="#what-is-domain-name">What is Domain Name?</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -414,36 +407,17 @@
           
             <h1>
               
-              DNS
+              Mongo
             </h1>
           
 
         
 
 
-<h3 id="what-is-dns-and-how-it-works">What is DNS and how it works?</h3>
-<p><strong>DNS</strong> : Domain Naming System
-All the electonice devices connected to internet communicate to each other via a sequence of numbers called ipaddresses.
-Since it&rsquo;s difficult for humans to remember these IPAddresses, there is a central server which translates the requested resource name to an ip address.
-It&rsquo;s like a phonebook with domain name and ipaddresses.</p>
-<h5 id="types-of-dns-servers">Types of DNS Servers</h5>
-<ul>
-<li>DNS Recursive servers
-<ul>
-<li>These are provided by ISP provider (internet providers), which assign an ipaddress to one&rsquo;s machine.</li>
-</ul>
-</li>
-<li>The request is then forwarded to Naming server. Types of Naming servers
-<ul>
-<li>Root Name Server</li>
-<li>TLD name server</li>
-<li>Authoritative name server</li>
-</ul>
-</li>
-</ul>
-<h3 id="what-is-domain-name">What is Domain Name?</h3>
-<p>Domain name is the address of the website. Each website has an ipaddress assigned to it which is it&rsquo;s unique address. When a address like &lsquo;google.com&rsquo; is entered in browser, the domain is translated in DNS server to ipaddress and routed to correct servers.
-Domain Name is similar to saving the home residential address of &ldquo;123 Street W, City 180004&rdquo; as &ldquo;Home&rdquo; in the phone.</p>
+<h4 id="collection-name-with--">Collection Name with “-”</h4>
+<p>While getting started with MongoDB, I created my first collection with name “june-collection”. I did this directly using spring-data-mongodb library.</p>
+<p>Mongo doesn’t restrict collection name with <code>-</code>, but while using mongo shell in windows, e.g. <code>db.june-collection.deleteMany</code> , the shell gives error saying “collection” is not recognized (the string after <code>-</code> in the collection name)</p>
+<p>After some googling, found that collection name with “-” is not one of the best approaches. But mongo shell can be still be used as <code>db['june-collection'].deleteMany</code></p>
 
 
 <footer class="footline">
@@ -481,6 +455,8 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -497,7 +473,6 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
-                    
                 
                 
 
@@ -510,26 +485,6 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -547,8 +502,21 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -620,6 +588,7 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                    
                 
                 
 
@@ -632,6 +601,7 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
             
                 
+                    
                     
                 
                 
@@ -656,10 +626,10 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
 	 
 	 
 		
-			<a class="nav nav-prev" href="/be-developer-roadmap/internet-basics/internet/" title="Internet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/things-i-learnt/" title="Things I Learnt"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/be-developer-roadmap/internet-basics/browsers/" title="Browsers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/be-developer-roadmap/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
