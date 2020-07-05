@@ -23,5 +23,24 @@ The compiler converts the source code into byte code. The interpretor interprets
 Java Virtual Machine or JVM provides an environment to support execution of java bytecode.</description>
     </item>
     
+    <item>
+      <title>Java Memory Management</title>
+      <link>/java-related/java-memory-management/</link>
+      <pubDate>Sat, 04 Jul 2020 21:21:58 -0400</pubDate>
+      
+      <guid>/java-related/java-memory-management/</guid>
+      <description>The Stack Memory  There can be multiple stacks In general in a stack data structure, as new elements are added the elements are pushed down in stack, while popping the first element is pushed out first. First in Last Out datastructure. Java store local variables of a class or method in stack, and are popped off the stack when it encounters end of function block or class block In general the variables stored in stack have very short lifetime.</description>
+    </item>
+    
+    <item>
+      <title>Java Garbage Collection</title>
+      <link>/java-related/java-garbage-collection/</link>
+      <pubDate>Sat, 04 Jul 2020 21:23:27 -0400</pubDate>
+      
+      <guid>/java-related/java-garbage-collection/</guid>
+      <description>Java avoids memory leakage by
+ running on a java virtual machine it adopts a garbage collection strategy: Any object which is not reachable from stack memory are eligible for garbage collection -System.gc() is a suggestion to JVM to run garbage collection, and not a gaurantee that all objects will be garbage collected. Usually it is not possible to have memory leaks from jvm to os, but sometimes there can be a soft leak.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>DNS :: VR</title>
+    <title>Java Garbage Collection :: VR</title>
 
     
     <link href="/css/nucleus.css?1593912325" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/be-developer-roadmap/internet-basics/dns/">
+  <body class="" data-url="/java-related/java-garbage-collection/">
     <nav id="sidebar" class="">
 
 
@@ -65,7 +65,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/internet-basics/" title="Basic Concepts around Internet" class="dd-item 
-        parent
+        
         
         
         ">
@@ -141,7 +141,7 @@
  
   
     
-      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item active">
+      <li data-nav-id="/be-developer-roadmap/internet-basics/dns/" title="DNS" class="dd-item ">
         <a href="/be-developer-roadmap/internet-basics/dns/">
         DNS
         
@@ -221,7 +221,7 @@
   
     
     <li data-nav-id="/java-related/" title="Java Related" class="dd-item 
-        
+        parent
         
         
         ">
@@ -289,7 +289,7 @@
  
   
     
-      <li data-nav-id="/java-related/java-garbage-collection/" title="Java Garbage Collection" class="dd-item ">
+      <li data-nav-id="/java-related/java-garbage-collection/" title="Java Garbage Collection" class="dd-item active">
         <a href="/java-related/java-garbage-collection/">
         Java Garbage Collection
         
@@ -412,13 +412,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>A Blog</a> > <a href='/be-developer-roadmap/'>Introduction</a> > <a href='/be-developer-roadmap/internet-basics/'>Basic Concepts around Internet</a> > DNS
-          
-        
+            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Java Garbage Collection
           
         
           
@@ -431,16 +425,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#what-is-dns-and-how-it-works">What is DNS and how it works?</a></li>
-        <li><a href="#what-is-domain-name">What is Domain Name?</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -456,36 +441,30 @@
           
             <h1>
               
-              DNS
+              Java Garbage Collection
             </h1>
           
 
         
 
 
-<h3 id="what-is-dns-and-how-it-works">What is DNS and how it works?</h3>
-<p><strong>DNS</strong> : Domain Naming System
-All the electonice devices connected to internet communicate to each other via a sequence of numbers called ipaddresses.
-Since it&rsquo;s difficult for humans to remember these IPAddresses, there is a central server which translates the requested resource name to an ip address.
-It&rsquo;s like a phonebook with domain name and ipaddresses.</p>
-<h5 id="types-of-dns-servers">Types of DNS Servers</h5>
+<p>Java avoids memory leakage by</p>
 <ul>
-<li>DNS Recursive servers
+<li>running on a java virtual machine</li>
+<li>it adopts a garbage collection strategy: <em>Any object which is not reachable from stack memory are eligible for garbage collection</em>
+-<code>System.gc()</code> is a suggestion to JVM to run garbage collection, and not a gaurantee that all objects will be garbage collected.</li>
+<li>Usually it is not possible to have memory leaks from jvm to os, but sometimes there can be a <em>soft leak</em>.</li>
+<li>
 <ul>
-<li>These are provided by ISP provider (internet providers), which assign an ipaddress to one&rsquo;s machine.</li>
+<li>this could be because somehow program is able to keep an object alive as JVM is able to find reference to object from stack.</li>
 </ul>
 </li>
-<li>The request is then forwarded to Naming server. Types of Naming servers
+<li>
 <ul>
-<li>Root Name Server</li>
-<li>TLD name server</li>
-<li>Authoritative name server</li>
+<li>Even such scenarios are handled once jvm invokes <code>free()</code> at shutdown of application. But during lifecycle of application, it will keep on consuming more n more memory.</li>
 </ul>
 </li>
 </ul>
-<h3 id="what-is-domain-name">What is Domain Name?</h3>
-<p>Domain name is the address of the website. Each website has an ipaddress assigned to it which is it&rsquo;s unique address. When a address like &lsquo;google.com&rsquo; is entered in browser, the domain is translated in DNS server to ipaddress and routed to correct servers.
-Domain Name is similar to saving the home residential address of &ldquo;123 Street W, City 180004&rdquo; as &ldquo;Home&rdquo; in the phone.</p>
 
 
 <footer class="footline">
@@ -523,6 +502,8 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -533,97 +514,6 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -686,6 +576,25 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -693,6 +602,78 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -730,10 +711,10 @@ Domain Name is similar to saving the home residential address of &ldquo;123 Stre
 	 
 	 
 		
-			<a class="nav nav-prev" href="/be-developer-roadmap/internet-basics/internet/" title="Internet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/java-related/java-memory-management/" title="Java Memory Management"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/be-developer-roadmap/internet-basics/browsers/" title="Browsers" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/things-i-learnt/" title="Things I Learnt" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
