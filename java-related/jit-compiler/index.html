@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Java Memory Management :: VR</title>
+    <title>Jit Compiler :: VR</title>
 
     
     <link href="/css/nucleus.css?1595217877" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/java-related/java-memory-management/">
+  <body class="" data-url="/java-related/jit-compiler/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
  
   
     
-      <li data-nav-id="/java-related/java-memory-management/" title="Java Memory Management" class="dd-item active">
+      <li data-nav-id="/java-related/java-memory-management/" title="Java Memory Management" class="dd-item ">
         <a href="/java-related/java-memory-management/">
         Java Memory Management
         
@@ -310,7 +310,7 @@
  
   
     
-      <li data-nav-id="/java-related/jit-compiler/" title="Jit Compiler" class="dd-item ">
+      <li data-nav-id="/java-related/jit-compiler/" title="Jit Compiler" class="dd-item active">
         <a href="/java-related/jit-compiler/">
         JIT Compiler
         
@@ -454,7 +454,7 @@
             
           
           
-            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Java Memory Management
+            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Jit Compiler
           
         
           
@@ -467,14 +467,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#the-stack-memory">The Stack Memory</a></li>
-    <li><a href="#the-heap-memory">The Heap Memory</a></li>
-    <li><a href="#rules">Rules</a></li>
-    <li><a href="#passing-variablesobjects">Passing Variables/Objects</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -490,35 +483,43 @@
           
             <h1>
               
-              Java Memory Management
+              Jit Compiler
             </h1>
           
 
         
 
 
-<h2 id="the-stack-memory">The Stack Memory</h2>
 <ul>
-<li>There can be multiple stacks</li>
-<li>In general in a stack data structure, as new elements are added the elements are pushed down in stack, while popping the first element is pushed out first. First in Last Out datastructure.</li>
-<li>Java store local variables of a class or method in stack, and are popped off the stack when it encounters end of function block or class block</li>
-<li>In general the variables stored in stack have very short lifetime.</li>
+<li>
+<p>How to find which methods are being compiled to native byte code by compiler.</p>
+<ul>
+<li>By running the class with flag *PrintCompilation * turned on.<code>-XX:+PrintCompilation</code></li>
 </ul>
-<h2 id="the-heap-memory">The Heap Memory</h2>
+</li>
+<li>
+<p>There are two level of compiler in java <em>C1 and C2</em></p>
 <ul>
-<li>The heap is shared between threads</li>
-<li>All primitives are stored in stack, whereas all objects are stored on heap</li>
+<li>On the basis of number of times a code block is used, it keeps on getting compiled at a more deeper tier.</li>
+<li>The first three level of compilation are done by C1 Compiler</li>
+<li>The C2 Compiler, compiles the code to native byte code as well places the code in <em>code cache</em>, hence even faster code execution. The <em>Native level 4</em> compilation.</li>
+<li>This whole process is termed as code profiling.</li>
+<li>To view detailed logs on compilation of a class, two flags are used.
+<ul>
+<li>first to unloc the diagnostic options of VM - <code>-XX+UnlockDiagnosticVMOptions</code>,</li>
+<li>followed by <code>-XX:+LogCompilation</code> to output compilation log to a file in xml format.</li>
 </ul>
-<h2 id="rules">Rules</h2>
-<ul>
-<li>Objects are stored on the heap memory</li>
-<li>Variables are a reference to the Object</li>
-<li>Local variables are stored on the stack</li>
+</li>
 </ul>
-<h2 id="passing-variablesobjects">Passing Variables/Objects</h2>
+</li>
+<li>
+<p>Code Cache Tuning</p>
 <ul>
-<li>In java, while passing parameters to methods, its always the copy of value of variable that is passed.</li>
-<li>In case of passing an object, the variables in stack store a reference to object in Heap. When the object is passed, the copy of reference is passed to the method.</li>
+<li><code>-XX:+PrintCodeCache</code> to print existing code cache sizes</li>
+<li><code>-XX:+ReservedCodeCacheSize=28m</code> to set maximum code cache size</li>
+<li><code>jconsole</code> is used to monitor jvm</li>
+</ul>
+</li>
 </ul>
 
 
@@ -691,26 +692,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -738,6 +719,23 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -745,6 +743,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -798,10 +799,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/java-related/basics/" title="Basics"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/java-related/java-garbage-collection/" title="Java Garbage Collection"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/java-related/java-garbage-collection/" title="Java Garbage Collection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/things-i-learnt/" title="Things I Learnt" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

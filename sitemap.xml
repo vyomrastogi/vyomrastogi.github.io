@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/things-i-learnt/gcp/</loc>
+    <lastmod>2020-07-20T00:02:15-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/java-related/java-memory-management/</loc>
     <lastmod>2020-07-04T21:21:58-04:00</lastmod>
   </url>
@@ -53,13 +58,18 @@
   </url>
   
   <url>
+    <loc>/java-related/jit-compiler/</loc>
+    <lastmod>2020-07-19T23:55:40-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/be-developer-roadmap/internet-basics/http/</loc>
     <lastmod>2020-06-07T23:54:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-07-04T21:23:27-04:00</lastmod>
+    <lastmod>2020-07-20T00:02:15-04:00</lastmod>
   </url>
   
   <url>

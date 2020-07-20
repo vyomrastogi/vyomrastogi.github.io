@@ -42,5 +42,16 @@ Java Virtual Machine or JVM provides an environment to support execution of java
  running on a java virtual machine it adopts a garbage collection strategy: Any object which is not reachable from stack memory are eligible for garbage collection -System.gc() is a suggestion to JVM to run garbage collection, and not a gaurantee that all objects will be garbage collected. Usually it is not possible to have memory leaks from jvm to os, but sometimes there can be a soft leak.</description>
     </item>
     
+    <item>
+      <title>Jit Compiler</title>
+      <link>/java-related/jit-compiler/</link>
+      <pubDate>Sun, 19 Jul 2020 23:55:40 -0400</pubDate>
+      
+      <guid>/java-related/jit-compiler/</guid>
+      <description>How to find which methods are being compiled to native byte code by compiler.
+ By running the class with flag *PrintCompilation * turned on.-XX:+PrintCompilation    There are two level of compiler in java C1 and C2
+ On the basis of number of times a code block is used, it keeps on getting compiled at a more deeper tier. The first three level of compilation are done by C1 Compiler The C2 Compiler, compiles the code to native byte code as well places the code in code cache, hence even faster code execution.</description>
+    </item>
+    
   </channel>
 </rss>
