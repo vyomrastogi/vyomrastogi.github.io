@@ -12,21 +12,21 @@
     <title>Java Memory Management :: VR</title>
 
     
-    <link href="/css/nucleus.css?1595217877" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1595217877" rel="stylesheet">
-    <link href="/css/hybrid.css?1595217877" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1595217877" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1595217877" rel="stylesheet">
-    <link href="/css/auto-complete.css?1595217877" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1595217877" rel="stylesheet">
-    <link href="/css/theme.css?1595217877" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1595217877" rel="stylesheet">
+    <link href="/css/nucleus.css?1596403374" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596403374" rel="stylesheet">
+    <link href="/css/hybrid.css?1596403374" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596403374" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596403374" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596403374" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596403374" rel="stylesheet">
+    <link href="/css/theme.css?1596403374" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596403374" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1595217877" rel="stylesheet">
+    <link href="/css/theme-blue.css?1596403374" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1595217877"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596403374"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -322,6 +322,48 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/java-related/java-collections/" title="Java Collections" class="dd-item ">
+        <a href="/java-related/java-collections/">
+        Java Collections
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/java-related/graalvm/" title="Graalvm" class="dd-item ">
+        <a href="/java-related/graalvm/">
+        Graalvm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -473,6 +515,8 @@
     <li><a href="#the-heap-memory">The Heap Memory</a></li>
     <li><a href="#rules">Rules</a></li>
     <li><a href="#passing-variablesobjects">Passing Variables/Objects</a></li>
+    <li><a href="#metaspace">Metaspace</a></li>
+    <li><a href="#string-pool">String Pool</a></li>
   </ul>
 </nav>
     </div>
@@ -519,6 +563,38 @@
 <ul>
 <li>In java, while passing parameters to methods, its always the copy of value of variable that is passed.</li>
 <li>In case of passing an object, the variables in stack store a reference to object in Heap. When the object is passed, the copy of reference is passed to the method.</li>
+</ul>
+<h2 id="metaspace">Metaspace</h2>
+<ul>
+<li>general metadata of objects, functions</li>
+<li>location where static variables are stored. Static primitive types are stored in metaspace, whereas static objects are created in heap but a pointer is held in metapace.</li>
+</ul>
+<h2 id="string-pool">String Pool</h2>
+<ul>
+<li>The strings with same hashcode are always in same string pool bucket (or same hashmap entry)</li>
+<li>Same bucket can have different string as well.</li>
+<li><code>-XX:+PrintStringTableStatistics</code> displays string pool data while running the program. Sample for 64 bit java 11 vm.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">SymbolTable statistics:
+Number of buckets       :     20011 =    160088 bytes, each 8
+Number of entries       :        14 =       336 bytes, each 24
+Number of literals      :        14 =       472 bytes, avg  33.714
+Total footprint         :           =    160896 bytes
+Average bucket size     :     0.001
+Variance of bucket size :     0.001
+Std. dev. of bucket size:     0.026
+Maximum bucket size     :         1
+StringTable statistics:
+Number of buckets       :     65536 =    524288 bytes, each 8
+Number of entries       :         6 =        96 bytes, each 16
+Number of literals      :         6 =       304 bytes, avg  50.667
+Total footprsize_t         :           =    524688 bytes
+Average bucket size     :     0.000
+Variance of bucket size :     0.000
+Std. dev. of bucket size:     0.010
+Maximum bucket size     :  
+</code></pre></div><ul>
+<li><code>-XX:StringTableSize=&lt;prime number&gt;</code> sets string pool size. This can improve application performance if existing string density in table was very high.</li>
 </ul>
 
 
@@ -738,6 +814,38 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -811,19 +919,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1595217877"></script>
-    <script src="/js/perfect-scrollbar.min.js?1595217877"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1595217877"></script>
-    <script src="/js/jquery.sticky.js?1595217877"></script>
-    <script src="/js/featherlight.min.js?1595217877"></script>
-    <script src="/js/highlight.pack.js?1595217877"></script>
+    <script src="/js/clipboard.min.js?1596403374"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596403374"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596403374"></script>
+    <script src="/js/jquery.sticky.js?1596403374"></script>
+    <script src="/js/featherlight.min.js?1596403374"></script>
+    <script src="/js/highlight.pack.js?1596403374"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1595217877"></script>
-    <script src="/js/learn.js?1595217877"></script>
-    <script src="/js/hugo-learn.js?1595217877"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596403374"></script>
+    <script src="/js/learn.js?1596403374"></script>
+    <script src="/js/hugo-learn.js?1596403374"></script>
 
-    <link href="/mermaid/mermaid.css?1595217877" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1595217877"></script>
+    <link href="/mermaid/mermaid.css?1596403374" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596403374"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

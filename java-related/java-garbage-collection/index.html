@@ -12,21 +12,21 @@
     <title>Java Garbage Collection :: VR</title>
 
     
-    <link href="/css/nucleus.css?1595217877" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1595217877" rel="stylesheet">
-    <link href="/css/hybrid.css?1595217877" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1595217877" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1595217877" rel="stylesheet">
-    <link href="/css/auto-complete.css?1595217877" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1595217877" rel="stylesheet">
-    <link href="/css/theme.css?1595217877" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1595217877" rel="stylesheet">
+    <link href="/css/nucleus.css?1596403374" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596403374" rel="stylesheet">
+    <link href="/css/hybrid.css?1596403374" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596403374" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596403374" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596403374" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596403374" rel="stylesheet">
+    <link href="/css/theme.css?1596403374" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596403374" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1595217877" rel="stylesheet">
+    <link href="/css/theme-blue.css?1596403374" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1595217877"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596403374"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -322,6 +322,48 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/java-related/java-collections/" title="Java Collections" class="dd-item ">
+        <a href="/java-related/java-collections/">
+        Java Collections
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/java-related/graalvm/" title="Graalvm" class="dd-item ">
+        <a href="/java-related/graalvm/">
+        Graalvm
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -467,7 +509,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -495,15 +545,45 @@
 <li>running on a java virtual machine</li>
 <li>it adopts a garbage collection strategy: <em>Any object which is not reachable from stack memory are eligible for garbage collection</em>
 -<code>System.gc()</code> is a suggestion to JVM to run garbage collection, and not a gaurantee that all objects will be garbage collected.</li>
-<li>Usually it is not possible to have memory leaks from jvm to os, but sometimes there can be a <em>soft leak</em>.</li>
-<li>
+<li>Usually it is not possible to have memory leaks from jvm to os, but sometimes there can be a <em>soft leak</em>.
 <ul>
-<li>this could be because somehow program is able to keep an object alive as JVM is able to find reference to object from stack.</li>
+<li>this could be when a program is able to keep an object alive. Then JVM is able to find reference to object from stack.</li>
+<li>Even such scenarios are handled once jvm invokes <code>free()</code> at shutdown of application. But during lifecycle of application, it will keep on consuming more n more memory.</li>
 </ul>
 </li>
-<li>
+<li>Soft leaks - are when an object  remains referenced when no longer needed</li>
+</ul>
+<p>In Java 11,</p>
 <ul>
-<li>Even such scenarios are handled once jvm invokes <code>free()</code> at shutdown of application. But during lifecycle of application, it will keep on consuming more n more memory.</li>
+<li>The GC alogorithms are tuned to free up memory and give it back to OS.</li>
+</ul>
+<h4 id="generational-garbage-collection">Generational Garbage Collection</h4>
+<ul>
+<li>There are two heap spaces in heap memory
+<ul>
+<li>young generation heap</li>
+<li>old generation heap</li>
+</ul>
+</li>
+<li>young generation is further segregated into Eden space/generation , s0 and s1. For all GC operations, the objects are moved from eden to s1, 20 to s1 or s1 to s0. Once s1/s0 (<em>s -&gt; survivor</em>) are full, the suviving objects are moved to old generation.</li>
+<li>GC happening on young generation is more efficient than the one which happens on old generation</li>
+</ul>
+<h4 id="tuning-garbage-collection">Tuning Garbage Collection</h4>
+<ul>
+<li>JVM dynamically adapts the sizes of different generations in heap according to the usage. This can be turned off using command <code>-XX:-UseAdaptiveSizePolicy</code></li>
+<li><code>-XX:NewRatio=n</code> allows to set the ratio of old generation to young generation. The ratio can not be less than 1 and must be a whole number.</li>
+<li><code>-XX:SurvivorRatio=n</code> allows to set the ratio of Eden space to survivor space eg. if n=4, then survivor space will be set to 1/4th of eden space.</li>
+<li><code>-XX:MaxTenuringThreshold=n</code> allows to set how many generation can an object be kept in young generation space.</li>
+<li><code>-XX:UseStringDeDuplication</code>. Only available if using G1</li>
+</ul>
+<h4 id="type-of-collectors">Type of Collectors</h4>
+<ul>
+<li>Serial - uses a single threaded collector -&gt; <code>-XX:+UseSerialGC</code></li>
+<li>Parallel - <code>-XX:+UseParallelGC</code>. This is default GC for Java 8 versions</li>
+<li>Mostly Concurrent
+<ul>
+<li><code>-XX:+UseConcMarkSweepGC</code> . This is default GC in Java 9</li>
+<li><code>-XX:+UseG1GC</code>. This is default GC since Java 10</li>
 </ul>
 </li>
 </ul>
@@ -725,6 +805,38 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -798,19 +910,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1595217877"></script>
-    <script src="/js/perfect-scrollbar.min.js?1595217877"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1595217877"></script>
-    <script src="/js/jquery.sticky.js?1595217877"></script>
-    <script src="/js/featherlight.min.js?1595217877"></script>
-    <script src="/js/highlight.pack.js?1595217877"></script>
+    <script src="/js/clipboard.min.js?1596403374"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596403374"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596403374"></script>
+    <script src="/js/jquery.sticky.js?1596403374"></script>
+    <script src="/js/featherlight.min.js?1596403374"></script>
+    <script src="/js/highlight.pack.js?1596403374"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1595217877"></script>
-    <script src="/js/learn.js?1595217877"></script>
-    <script src="/js/hugo-learn.js?1595217877"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596403374"></script>
+    <script src="/js/learn.js?1596403374"></script>
+    <script src="/js/hugo-learn.js?1596403374"></script>
 
-    <link href="/mermaid/mermaid.css?1595217877" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1595217877"></script>
+    <link href="/mermaid/mermaid.css?1596403374" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596403374"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

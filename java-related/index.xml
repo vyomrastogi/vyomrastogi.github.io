@@ -53,5 +53,24 @@ Java Virtual Machine or JVM provides an environment to support execution of java
  On the basis of number of times a code block is used, it keeps on getting compiled at a more deeper tier. The first three level of compilation are done by C1 Compiler The C2 Compiler, compiles the code to native byte code as well places the code in code cache, hence even faster code execution.</description>
     </item>
     
+    <item>
+      <title>Java Collections</title>
+      <link>/java-related/java-collections/</link>
+      <pubDate>Sun, 02 Aug 2020 17:21:11 -0400</pubDate>
+      
+      <guid>/java-related/java-collections/</guid>
+      <description>List Implementations  ArrayList  instantiated as array in memory with size of 10 elements    CopyOnWriteArrayList  Is thread safe version of Arraylist Is very costly in terms of ordinality Can be used when  application is multi-threaded multiple threads need to access the same list no. of iterations or reads are lot more than no. of writes/addition or deletion     AttributeList- Child of Arraylist, specific usage for Mbean LinkedList RoleList -Child of Arraylist RoleUnresolvedList - Child of Arraylist Stack Vector  Main Differences between arraylist and linkedlist  Arraylist holds references of object at each position.</description>
+    </item>
+    
+    <item>
+      <title>Graalvm</title>
+      <link>/java-related/graalvm/</link>
+      <pubDate>Sun, 02 Aug 2020 17:22:16 -0400</pubDate>
+      
+      <guid>/java-related/graalvm/</guid>
+      <description> An alternate JVM An alternate java compiler Provides a native compiler, hence application can run without JVM  Steps to Install
+ wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz tar -xzvf graalvm-ce-java11-darwin-amd64-20.1.0.tar.gz Set GraalVM to Path sudo apt-get install gcc zlib1g-dev to install native image dependencies gu install native-image to install native image component native-image &amp;lt;class file&amp;gt; creates a native image with JVM packaged  Reference  https://www.graalvm.org/getting-started/  </description>
+    </item>
+    
   </channel>
 </rss>

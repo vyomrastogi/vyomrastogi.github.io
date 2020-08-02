@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basics :: VR</title>
+    <title>Java Collections :: VR</title>
 
     
     <link href="/css/nucleus.css?1596403374" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/java-related/basics/">
+  <body class="" data-url="/java-related/java-collections/">
     <nav id="sidebar" class="">
 
 
@@ -247,7 +247,7 @@
  
   
     
-      <li data-nav-id="/java-related/basics/" title="Basics" class="dd-item active">
+      <li data-nav-id="/java-related/basics/" title="Basics" class="dd-item ">
         <a href="/java-related/basics/">
         Basics
         
@@ -331,7 +331,7 @@
  
   
     
-      <li data-nav-id="/java-related/java-collections/" title="Java Collections" class="dd-item ">
+      <li data-nav-id="/java-related/java-collections/" title="Java Collections" class="dd-item active">
         <a href="/java-related/java-collections/">
         Java Collections
         
@@ -496,7 +496,7 @@
             
           
           
-            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Basics
+            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Java Collections
           
         
           
@@ -513,7 +513,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#java">Java</a></li>
+        <li><a href="#list-implementations">List Implementations</a></li>
       </ul>
     </li>
   </ul>
@@ -533,81 +533,45 @@
           
             <h1>
               
-              Basics
+              Java Collections
             </h1>
           
 
         
 
 
-<h3 id="java">Java</h3>
-<p>Java is a high level programming language. Main characteristics include</p>
+<h3 id="list-implementations">List Implementations</h3>
 <ul>
-<li>robust</li>
-<li>secure</li>
-<li>platform/os independent</li>
-<li>object-oriented</li>
-<li>multi-threaded</li>
-<li>portable (read-once-write-anywhere) etc.</li>
+<li>ArrayList
+<ul>
+<li>instantiated as array in memory with size of 10 elements</li>
+<li></li>
 </ul>
-<p>Java requires both <em>compiler</em> and <em>interpretor</em> to run.</p>
-<p>The compiler converts the source code into byte code. The interpretor interprets this bytecode and excutes the application/logic. Since java is interpreted language, it is platform independent</p>
-<p><strong>Java Virtual Machine</strong> or <em>JVM</em> provides an environment to support execution of java bytecode. It compiles a <em>.java</em> file to <em>.class</em> which contains byte code understandable by the machine.
-It is a specification which must be implemented by computer system.</p>
-<h4 id="jvm-architecture">JVM Architecture</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        Classloader
-            <span style="color:#f92672">|</span>
-  Allocated Memory Locations
-   <span style="color:#f92672">|</span>    <span style="color:#f92672">|</span>     <span style="color:#f92672">|</span>     <span style="color:#f92672">|</span>     <span style="color:#f92672">|</span>
-<span style="color:#f92672">|--------------------------------|</span>
-<span style="color:#f92672">|</span>Class Heap Stack Native Program <span style="color:#f92672">|</span>
-<span style="color:#f92672">|</span>Area             Method Counter <span style="color:#f92672">|</span>
-<span style="color:#f92672">|</span>                 Stack  Register<span style="color:#f92672">|</span>
-<span style="color:#f92672">|--------------------------------|</span> 
-            <span style="color:#f92672">|</span>
-      Execution Engine
-            <span style="color:#f92672">|</span>
-    Native Method Interface
-            <span style="color:#f92672">|</span>
-       Java Libraries
-
-</code></pre></div><h4 id="jvm-memory-types">JVM Memory Types</h4>
+</li>
+<li>CopyOnWriteArrayList
 <ul>
-<li><strong>Class Area</strong> : It is used to store the each classes structures like runtime constant pool, fields, method data and code for methods</li>
-<li><strong>Heap</strong> : It is memory area in which objects are allocated memory and stored</li>
-<li><strong>Stack</strong> : Java stack stores frames. It contains partial results and local variables. Each threads spawns its own jvm stack which contain variables related to that thread. The frame is terminated once the thread execution is completed</li>
-<li><strong>Native Method Stack</strong> : For all the native methods used in the application</li>
-<li><strong>Program Counter Register</strong> : it contains the address of jvm instructions being executed.</li>
+<li>Is thread safe version of Arraylist</li>
+<li>Is very costly in terms of ordinality</li>
+<li>Can be used when
+<ul>
+<li>application is multi-threaded</li>
+<li>multiple threads need to access the same list</li>
+<li>no. of iterations or reads are lot more than no. of writes/addition or deletion</li>
 </ul>
-<p>For Example, in a given program</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">int</span> rollNo<span style="color:#f92672">;</span>
-    String name<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">static</span> String college <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;University&#34;</span><span style="color:#f92672">;</span>
-    Student<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> rollNo<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">rollNo</span> <span style="color:#f92672">=</span> rollNo<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;RollNo: %s, Name:%s, College:%s \n&#34;</span><span style="color:#f92672">,</span>rollNo<span style="color:#f92672">,</span> name<span style="color:#f92672">,</span> college<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>       
-        Student s1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>57<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Tony&#34;</span><span style="color:#f92672">);</span>
-        Student s2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>60<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Peter&#34;</span><span style="color:#f92672">);</span>
-        s1<span style="color:#f92672">.</span><span style="color:#a6e22e">display</span><span style="color:#f92672">();</span>
-        s2<span style="color:#f92672">.</span><span style="color:#a6e22e">display</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><code>static String college</code> is stored in Class Area.</p>
-<p><code>Student object s1 and s2</code> are stored in Java Stack, s2 being at top (First in Last out).</p>
-<p>Object attributes <code>rollNo and name</code> are stored in Heap memory.</p>
-<h4 id="classloader">Classloader</h4>
-<p>A classloader is subsystem of a JVM. Whenever a java program is executed, it is first loaded by classloader</p>
+</li>
+</ul>
+</li>
+<li>AttributeList- Child of Arraylist, specific usage for Mbean</li>
+<li>LinkedList</li>
+<li>RoleList -Child of Arraylist</li>
+<li>RoleUnresolvedList - Child of Arraylist</li>
+<li>Stack</li>
+<li>Vector</li>
+</ul>
+<h4 id="main-differences-between-arraylist-and-linkedlist">Main Differences between arraylist and linkedlist</h4>
 <ul>
-<li><strong>Bootstrap ClassLoader</strong> : The first classloader which loads <code>rt.jar</code> files. The jar contains basic standard edition files.</li>
-<li><strong>Extension ClassLoader</strong> : It loads the jar files located at <code>$JAVA_HOME/jre/lib/ext</code> directory</li>
-<li><strong>Application ClassLoader</strong> : It loads all the class files in classpath.</li>
+<li>Arraylist holds references of object at each position. Therefore, removing an element from middle of list or reading an element at particular position is faster</li>
+<li>In Linkedlist, all the node objects hold pointer to previous and next node. So operations like add at start/end or remove at start/end are faster. Whereas if an element at particular position needs to removed, then list needs to be iterated over to that position and then element can be removed.</li>
 </ul>
 
 
@@ -761,23 +725,6 @@ It is a specification which must be implemented by computer system.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -844,6 +791,26 @@ It is a specification which must be implemented by computer system.</p>
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -916,10 +883,10 @@ It is a specification which must be implemented by computer system.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/java-related/" title="Java Related"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/java-related/jit-compiler/" title="Jit Compiler"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/java-related/java-memory-management/" title="Java Memory Management" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/java-related/graalvm/" title="Graalvm" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
