@@ -33,5 +33,15 @@ After some googling, found that collection name with “-” is not one of the b
  Dialogflow : to build virtual chat agents and conversational experiences Cloud Text-to-Speech API : to convert text to human like speech using Wavenet voices Cloud Speech-to-Text API : to convert speech to text    Language</description>
     </item>
     
+    <item>
+      <title>PostgreSQL</title>
+      <link>/things-i-learnt/postgresql/</link>
+      <pubDate>Mon, 03 Aug 2020 00:16:39 -0400</pubDate>
+      
+      <guid>/things-i-learnt/postgresql/</guid>
+      <description>Installation Steps to install postgreSql in Ubuntu 20.04
+ sudo apt update - to refresh package index sudo apt install postgresql-contrib - to install postgresql alongwith additional tools and packages By default, a postgres user is created which can be used to manage postgres. sudo -i -u postgres psql to interact with postgres and \q to exit postgresql prompt createuser --interactive --password postgres-user to create new user createdb demo-db -O postgres-user to create a new db update the pg_hba.</description>
+    </item>
+    
   </channel>
 </rss>

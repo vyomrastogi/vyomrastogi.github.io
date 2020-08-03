@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Mongo :: VR</title>
+    <title>PostgreSQL :: VR</title>
 
     
     <link href="/css/nucleus.css?1596428269" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/things-i-learnt/mongo/">
+  <body class="" data-url="/things-i-learnt/postgresql/">
     <nav id="sidebar" class="">
 
 
@@ -407,7 +407,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/mongo/" title="Mongo" class="dd-item active">
+      <li data-nav-id="/things-i-learnt/mongo/" title="Mongo" class="dd-item ">
         <a href="/things-i-learnt/mongo/">
         Mongo
         
@@ -449,7 +449,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/postgresql/" title="PostgreSQL" class="dd-item ">
+      <li data-nav-id="/things-i-learnt/postgresql/" title="PostgreSQL" class="dd-item active">
         <a href="/things-i-learnt/postgresql/">
         PostgreSQL
         
@@ -517,7 +517,7 @@
             
           
           
-            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > Mongo
+            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > PostgreSQL
           
         
           
@@ -554,17 +554,32 @@
           
             <h1>
               
-              Mongo
+              PostgreSQL
             </h1>
           
 
         
 
 
-<h4 id="collection-name-with--">Collection Name with “-”</h4>
-<p>While getting started with MongoDB, I created my first collection with name “june-collection”. I did this directly using spring-data-mongodb library.</p>
-<p>Mongo doesn’t restrict collection name with <code>-</code>, but while using mongo shell in windows, e.g. <code>db.june-collection.deleteMany</code> , the shell gives error saying “collection” is not recognized (the string after <code>-</code> in the collection name)</p>
-<p>After some googling, found that collection name with “-” is not one of the best approaches. But mongo shell can be still be used as <code>db['june-collection'].deleteMany</code></p>
+<h4 id="installation">Installation</h4>
+<p>Steps to install postgreSql in Ubuntu 20.04</p>
+<ul>
+<li><code>sudo apt update</code> - to refresh package index</li>
+<li><code>sudo apt install postgresql-contrib</code> - to install postgresql alongwith additional tools and packages</li>
+<li>By default, a postgres user is created which can be used to manage postgres. <code>sudo -i -u postgres</code></li>
+<li><code>psql</code> to interact with postgres and <code>\q</code> to exit postgresql prompt</li>
+<li><code>createuser --interactive --password postgres-user</code> to create new user</li>
+<li><code>createdb demo-db -O postgres-user</code> to create a new db</li>
+<li>update the <code>pg_hba.conf</code> to allow local connections
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># &#34;local&#34; is for Unix domain socket connections only</span>
+local   all             all                                     trust
+<span style="color:#75715e"># IPv4 local connections:</span>
+host    all             all             127.0.0.1/32            trust
+</code></pre></div><pre><code></code></pre></li>
+<li><code>sudo service postgresql restart</code> to enable the changes done</li>
+</ul>
+<h5 id="reference">Reference</h5>
+<p><a href="http://zetcode.com/springboot/postgresql/">http://zetcode.com/springboot/postgresql/</a></p>
 
 
 <footer class="footline">
@@ -829,23 +844,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -864,6 +862,23 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -888,10 +903,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/things-i-learnt/" title="Things I Learnt"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/things-i-learnt/gcp/" title="Google Cloud Platform"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/things-i-learnt/gcp/" title="Google Cloud Platform" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/things-i-learnt/mongo/" title="Mongo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

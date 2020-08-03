@@ -6,7 +6,7 @@
     <description>Recent content in A Blog on VR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 Aug 2020 17:22:16 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 00:16:39 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -72,6 +72,16 @@ How does Internet work? Internet is global network of physical cables/optical fi
       <guid>/be-developer-roadmap/internet-basics/dns/</guid>
       <description>What is DNS and how it works? DNS : Domain Naming System All the electonice devices connected to internet communicate to each other via a sequence of numbers called ipaddresses. Since it&amp;rsquo;s difficult for humans to remember these IPAddresses, there is a central server which translates the requested resource name to an ip address. It&amp;rsquo;s like a phonebook with domain name and ipaddresses.
 Types of DNS Servers  DNS Recursive servers  These are provided by ISP provider (internet providers), which assign an ipaddress to one&amp;rsquo;s machine.</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>/things-i-learnt/postgresql/</link>
+      <pubDate>Mon, 03 Aug 2020 00:16:39 -0400</pubDate>
+      
+      <guid>/things-i-learnt/postgresql/</guid>
+      <description>Installation Steps to install postgreSql in Ubuntu 20.04
+ sudo apt update - to refresh package index sudo apt install postgresql-contrib - to install postgresql alongwith additional tools and packages By default, a postgres user is created which can be used to manage postgres. sudo -i -u postgres psql to interact with postgres and \q to exit postgresql prompt createuser --interactive --password postgres-user to create new user createdb demo-db -O postgres-user to create a new db update the pg_hba.</description>
     </item>
     
     <item>

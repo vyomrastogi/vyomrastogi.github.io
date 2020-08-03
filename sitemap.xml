@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>/things-i-learnt/postgresql/</loc>
+    <lastmod>2020-08-03T00:16:39-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/java-related/java-garbage-collection/</loc>
     <lastmod>2020-07-04T21:23:27-04:00</lastmod>
   </url>
@@ -79,7 +84,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-08-02T17:22:16-04:00</lastmod>
+    <lastmod>2020-08-03T00:16:39-04:00</lastmod>
   </url>
   
   <url>
