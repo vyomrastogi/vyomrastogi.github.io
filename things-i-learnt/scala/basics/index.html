@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basic Concepts around Internet :: VR</title>
+    <title>Basics :: VR</title>
 
     
     <link href="/css/nucleus.css?1609132917" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/be-developer-roadmap/internet-basics/">
+  <body class="" data-url="/things-i-learnt/scala/basics/">
     <nav id="sidebar" class="">
 
 
@@ -65,7 +65,7 @@
   
     
     <li data-nav-id="/be-developer-roadmap/" title="Introduction" class="dd-item 
-        parent
+        
         
         
         ">
@@ -94,8 +94,8 @@
   
     
     <li data-nav-id="/be-developer-roadmap/internet-basics/" title="Basic Concepts around Internet" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/be-developer-roadmap/internet-basics/">
@@ -381,7 +381,7 @@
   
     
     <li data-nav-id="/things-i-learnt/" title="Things I Learnt" class="dd-item 
-        
+        parent
         
         
         ">
@@ -473,7 +473,7 @@
   
     
     <li data-nav-id="/things-i-learnt/scala/" title="Scala" class="dd-item 
-        
+        parent
         
         
         ">
@@ -499,7 +499,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/scala/basics/" title="Basics" class="dd-item ">
+      <li data-nav-id="/things-i-learnt/scala/basics/" title="Basics" class="dd-item active">
         <a href="/things-i-learnt/scala/basics/">
         Basics
         
@@ -576,7 +576,13 @@
             
           
           
-            <a href='/'>A Blog</a> > <a href='/be-developer-roadmap/'>Introduction</a> > Basic Concepts around Internet
+            
+            
+          
+          
+            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > <a href='/things-i-learnt/scala/'>Scala</a> > Basics
+          
+        
           
         
           
@@ -591,11 +597,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#internet--etc">Internet &amp; Etc.</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#variables">Variables</a></li>
   </ul>
 </nav>
     </div>
@@ -613,27 +616,53 @@
           
             <h1>
               
-              Basic Concepts around Internet
+              Basics
             </h1>
           
 
         
 
 
-
-	<h2 id="internet--etc">Internet &amp; Etc.</h2>
-<h4 id="references">References</h4>
+<h2 id="introduction">Introduction</h2>
+<p>An excerpt from <a href="https://en.wikipedia.org/wiki/Scala_(programming_language)">wiki</a></p>
+<blockquote>
+<p><strong>Scala</strong> is a general-purpose programming language providing support for both <strong>object-oriented programming</strong> and <strong>functional programming</strong>. The language has a <strong>strong static type</strong> system. Designed to be <strong>concise</strong>, many of Scala&rsquo;s design decisions are aimed to address criticisms of Java.</p>
+</blockquote>
+<blockquote>
+<p>It is executed in a JVM. <code>.scala</code> file <strong>compiles</strong> to executable <code>byte code</code> by <strong>scala compiler</strong>. Byte Code is executed in JVM on different Operating systems</p>
+</blockquote>
+<h2 id="variables">Variables</h2>
+<p>Two types of variables in scala</p>
 <ul>
-<li>link: <a href="https://roadmap.sh/backend">https://roadmap.sh/backend</a></li>
-<li>link: <a href="https://edu.gcfglobal.org/en/internetbasics/what-is-the-internet/1/">https://edu.gcfglobal.org/en/internetbasics/what-is-the-internet/1/</a></li>
-<li>link: <a href="https://www.youtube.com/watch?v=z0HN-fG6oT4">About Browsers</a></li>
+<li><strong>immutable</strong>
+<ul>
+<li>any variable declared as <code>val</code>, can not be re-assigned. It is equivalent to Java <code>final</code> keyword.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  object Variables <span style="color:#f92672">{</span>
+      def <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>args<span style="color:#f92672">:</span> Array<span style="color:#f92672">[</span>String<span style="color:#f92672">]):</span> Unit <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+      println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">);</span>
+          <span style="color:#75715e">/*
+</span><span style="color:#75715e">          * Immuatable Variables
+</span><span style="color:#75715e">          */</span>
+          val definedInteger <span style="color:#f92672">:</span> Int <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+          definedInteger <span style="color:#f92672">=</span> 5 <span style="color:#f92672">;</span> <span style="color:#75715e">// gives compilation error, reassignement of val
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">}</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li><strong>mutable</strong>
+<ul>
+<li>any variable declared as <code>var</code>. It can be reassigned.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/*
+</span><span style="color:#75715e">  * Mutable Variables
+</span><span style="color:#75715e">  */</span>
+  var mutableInteger <span style="color:#f92672">:</span> Int <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+  mutableInteger <span style="color:#f92672">=</span> 5 <span style="color:#75715e">// reassignement is allowed
+</span></code></pre></div></li>
 </ul>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -668,6 +697,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -678,93 +709,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -843,35 +787,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -887,8 +802,6 @@
                 
 
                     
-                    
-                        
                     
                     
 
@@ -954,10 +867,130 @@
                     
 
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -985,10 +1018,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/be-developer-roadmap/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/things-i-learnt/scala/" title="Scala"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/be-developer-roadmap/internet-basics/internet/" title="Internet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/things-i-learnt/mongo/" title="Mongo" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1018,3 +1051,4 @@
 
   </body>
 </html>
+

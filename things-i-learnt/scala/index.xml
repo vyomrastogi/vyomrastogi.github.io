@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scala on VR</title>
+    <link>/things-i-learnt/scala/</link>
+    <description>Recent content in Scala on VR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 27 Dec 2020 23:23:23 -0500</lastBuildDate><atom:link href="/things-i-learnt/scala/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basics</title>
+      <link>/things-i-learnt/scala/basics/</link>
+      <pubDate>Sun, 27 Dec 2020 23:25:29 -0500</pubDate>
+      
+      <guid>/things-i-learnt/scala/basics/</guid>
+      <description>Introduction An excerpt from wiki
+ Scala is a general-purpose programming language providing support for both object-oriented programming and functional programming. The language has a strong static type system. Designed to be concise, many of Scala&amp;rsquo;s design decisions are aimed to address criticisms of Java.
+  It is executed in a JVM. .scala file compiles to executable byte code by scala compiler. Byte Code is executed in JVM on different Operating systems</description>
+    </item>
+    
+  </channel>
+</rss>
