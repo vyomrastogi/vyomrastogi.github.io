@@ -36,9 +36,9 @@ After some googling, found that collection name with “-” is not one of the b
       
       <guid>/java-related/basics/</guid>
       <description>Java Java is a high level programming language. Main characteristics include
- robust secure platform/os independent object-oriented multi-threaded portable (read-once-write-anywhere) etc.  Java requires both compiler and interpretor to run.
+ robust secure platform/os independent object-oriented multi-threaded portable etc.  Java requires both compiler and interpretor to run.
 The compiler converts the source code into byte code. The interpretor interprets this bytecode and excutes the application/logic. Since java is interpreted language, it is platform independent
-Java Virtual Machine or JVM provides an environment to support execution of java bytecode.</description>
+Java Virtual Machine or JVM provides an environment to support execution of java bytecode. It compiles a .</description>
     </item>
     
     <item>
