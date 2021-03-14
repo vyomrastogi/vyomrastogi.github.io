@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Graalvm :: VR</title>
+    <title>Spring Framework :: VR</title>
 
     
     <link href="/css/nucleus.css?1615757473" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/java-related/graalvm/">
+  <body class="" data-url="/spring/spring-framework/">
     <nav id="sidebar" class="">
 
 
@@ -221,7 +221,7 @@
   
     
     <li data-nav-id="/java-related/" title="Java Related" class="dd-item 
-        parent
+        
         
         
         ">
@@ -352,7 +352,7 @@
  
   
     
-      <li data-nav-id="/java-related/graalvm/" title="Graalvm" class="dd-item active">
+      <li data-nav-id="/java-related/graalvm/" title="Graalvm" class="dd-item ">
         <a href="/java-related/graalvm/">
         Graalvm
         
@@ -537,7 +537,7 @@
   
     
     <li data-nav-id="/spring/" title="Spring" class="dd-item 
-        
+        parent
         
         
         ">
@@ -563,7 +563,7 @@
  
   
     
-      <li data-nav-id="/spring/spring-framework/" title="Spring Framework" class="dd-item ">
+      <li data-nav-id="/spring/spring-framework/" title="Spring Framework" class="dd-item active">
         <a href="/spring/spring-framework/">
         Spring Framework
         
@@ -631,7 +631,7 @@
             
           
           
-            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Graalvm
+            <a href='/'>A Blog</a> > <a href='/spring/'>Spring</a> > Spring Framework
           
         
           
@@ -648,7 +648,7 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#ioc-container">IOC Container</a></li>
       </ul>
     </li>
   </ul>
@@ -668,30 +668,31 @@
           
             <h1>
               
-              Graalvm
+              Spring Framework
             </h1>
           
 
         
 
 
+<h3 id="ioc-container">IOC Container</h3>
+<p>IOC container find the beans, wire the bean and maintains the lifecycle of a bean.
+There are two types</p>
 <ul>
-<li>An alternate JVM</li>
-<li>An alternate java compiler</li>
-<li>Provides a native compiler, hence application can run without JVM</li>
+<li>Beanfactory
+<ul>
+<li>Most basic container provided by spring</li>
+<li></li>
 </ul>
-<p>Steps to Install</p>
+</li>
+<li>ApplicationContext
 <ul>
-<li><code>wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz</code></li>
-<li><code>tar -xzvf graalvm-ce-java11-darwin-amd64-20.1.0.tar.gz</code></li>
-<li>Set GraalVM to Path</li>
-<li><code>sudo apt-get install gcc zlib1g-dev</code> to install native image dependencies</li>
-<li><code>gu install native-image</code> to install native image component</li>
-<li><code>native-image &lt;class file&gt;</code> creates a native image with JVM packaged</li>
+<li>advanced version of IOC container</li>
+<li>I8n capabilities</li>
+<li>Provided webapplication context support</li>
+<li>support for AOP</li>
 </ul>
-<h5 id="reference">Reference</h5>
-<ul>
-<li><a href="https://www.graalvm.org/getting-started/">https://www.graalvm.org/getting-started/</a></li>
+</li>
 </ul>
 
 
@@ -831,7 +832,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -844,9 +844,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -928,7 +925,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -947,9 +943,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1049,6 +1042,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1061,6 +1055,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1085,10 +1080,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/java-related/java-collections/" title="Java Collections"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/spring/" title="Spring"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/things-i-learnt/" title="Things I Learnt" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/be-developer-roadmap/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

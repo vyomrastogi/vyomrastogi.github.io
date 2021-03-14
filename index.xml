@@ -6,7 +6,17 @@
     <description>Recent content in A Blog on VR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 27 Dec 2020 23:25:29 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 17:04:41 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Framework</title>
+      <link>/spring/spring-framework/</link>
+      <pubDate>Sun, 14 Mar 2021 17:04:41 -0400</pubDate>
+      
+      <guid>/spring/spring-framework/</guid>
+      <description>IOC Container IOC container find the beans, wire the bean and maintains the lifecycle of a bean. There are two types
+ Beanfactory  Most basic container provided by spring    ApplicationContext  advanced version of IOC container I8n capabilities Provided webapplication context support support for AOP    </description>
+    </item>
+    
     <item>
       <title>Basics</title>
       <link>/things-i-learnt/scala/basics/</link>
