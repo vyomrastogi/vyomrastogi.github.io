@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Java Related :: VR</title>
+    <title>AI/ML Services :: VR</title>
 
     
     <link href="/css/nucleus.css?1615760030" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/java-related/">
+  <body class="" data-url="/cloud-native/gcp/gcp-aiml/">
     <nav id="sidebar" class="">
 
 
@@ -221,8 +221,8 @@
   
     
     <li data-nav-id="/java-related/" title="Java Related" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/java-related/">
@@ -571,7 +571,7 @@
   
     
     <li data-nav-id="/cloud-native/" title="Cloud Native" class="dd-item 
-        
+        parent
         
         
         ">
@@ -657,7 +657,7 @@
   
     
     <li data-nav-id="/cloud-native/gcp/" title="Google Cloud Platform" class="dd-item 
-        
+        parent
         
         
         ">
@@ -683,7 +683,7 @@
  
   
     
-      <li data-nav-id="/cloud-native/gcp/gcp-aiml/" title="AI/ML Services" class="dd-item ">
+      <li data-nav-id="/cloud-native/gcp/gcp-aiml/" title="AI/ML Services" class="dd-item active">
         <a href="/cloud-native/gcp/gcp-aiml/">
         AI/ML Services
         
@@ -756,7 +756,19 @@
             
           
           
-            <a href='/'>A Blog</a> > Java Related
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>A Blog</a> > <a href='/cloud-native/'>Cloud Native</a> > <a href='/cloud-native/gcp/'>Google Cloud Platform</a> > AI/ML Services
+          
+        
+          
+        
           
         
           
@@ -767,7 +779,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#gcp-aiml-services">GCP AI/ML Services</a>
+      <ul>
+        <li><a href="#ai-building-blocks">AI Building Blocks</a></li>
+        <li><a href="#cloud-automl">Cloud AutoML</a></li>
+        <li><a href="#ai-platform">AI Platform</a></li>
+        <li><a href="#ai-hub">AI Hub</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -783,21 +807,149 @@
           
             <h1>
               
-              Java Related
+              AI/ML Services
             </h1>
           
 
         
 
 
+<h2 id="gcp-aiml-services">GCP AI/ML Services</h2>
+<h3 id="ai-building-blocks">AI Building Blocks</h3>
+<ul>
+<li>AI through simple REST calls</li>
+</ul>
+<ol>
+<li>
+<p>Sight</p>
+<ol>
+<li>Vision API : Derive insights from images</li>
+<li>Video API : content discovery and engaging video experiences</li>
+</ol>
+</li>
+<li>
+<p>Conversation</p>
+<ol>
+<li>Dialogflow : to build virtual chat agents and conversational experiences</li>
+<li>Cloud Text-to-Speech API : to convert text to human like speech using Wavenet voices</li>
+<li>Cloud Speech-to-Text API : to convert speech to text</li>
+</ol>
+</li>
+<li>
+<p>Language</p>
+<ol>
+<li>Translation: to detect and translate between languages</li>
+<li>Natural Language: Reveal the structure and meaning of text through machine learning</li>
+</ol>
+</li>
+<li>
+<p>Structured Data</p>
+<ol>
+<li>AutoML Tables: build and deploy machine learning models on structured data</li>
+<li>Recommendations AI: delivers personalized recommendations</li>
+<li>Cloud Inference API: to run large-scale correlations over time-series datasets</li>
+</ol>
+</li>
+</ol>
+<h3 id="cloud-automl">Cloud AutoML</h3>
+<ul>
+<li>training models on custom data sets</li>
+<li>custom machine learning models without writing code</li>
+<li>based google&rsquo;s ml algorithms</li>
+<li>AutoML services
+<ul>
+<li>Sight
+<ul>
+<li>Vision</li>
+<li>Video</li>
+</ul>
+</li>
+<li>Language
+<ul>
+<li>Natual Language</li>
+<li>Translation</li>
+</ul>
+</li>
+<li>Struture Data
+<ul>
+<li>Tabular Data</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ai-platform">AI Platform</h3>
+<ul>
+<li>end-to-end ML pipelines on-premises and cloud</li>
+<li>targetted for users who are building custom ml models and want utilize ML pipelines</li>
+<li>based on Kubeflow, open source ML project based on kubernetes</li>
+</ul>
+<p>General steps in a ML pipeline</p>
+<pre><code>Ingest Data
+	|
+ Prepare
+ 	|
+Pre-Process
+	| 
+ Discover
+ 	|
+ Develop
+ 	|
+  Train
+  	|
+Test &amp; Analyze 
+	|
+ Deploy
+</code></pre><h3 id="ai-hub">AI Hub</h3>
+<ul>
+<li>repository to discover, share and deploy ML Models</li>
+<li>hosted by Google</li>
+<li>hosts plug and play AI components</li>
+<li>includes components like
+<ul>
+<li>Kubeflow Components</li>
+<li>VM Images</li>
+<li>Jupyter Notebooks</li>
+<li>Trained Models</li>
+<li>Tensorflow Modules</li>
+</ul>
+</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Product</th>
+<th style="text-align:center">Features</th>
+<th style="text-align:right">Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AI Building Blocks</td>
+<td style="text-align:center">REST Api Endpoint for vision, language, data</td>
+<td style="text-align:right">Using AI api in apps</td>
+</tr>
+<tr>
+<td style="text-align:left">Cloud AutoML</td>
+<td style="text-align:center">training models based on custom data</td>
+<td style="text-align:right">Training and deploying models on custom datasets</td>
+</tr>
+<tr>
+<td style="text-align:left">AI Platform</td>
+<td style="text-align:center">ML pipelines</td>
+<td style="text-align:right">For user to leverage ML pipelines to train and deploy the custom ML models</td>
+</tr>
+<tr>
+<td style="text-align:left">AI Hub</td>
+<td style="text-align:center">repository for hosting/sharing AI components</td>
+<td style="text-align:right">Resusing existing components</td>
+</tr>
+</tbody>
+</table>
 
-	<p>Notes taken while revisiting Core Java and various related topics</p>
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -933,7 +1085,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -946,9 +1097,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1163,6 +1311,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1177,6 +1326,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1210,6 +1362,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1222,6 +1375,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1249,10 +1403,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/be-developer-roadmap/internet-basics/http/" title="Http"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud-native/gcp/" title="Google Cloud Platform"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/java-related/basics/" title="Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloud-native/k8s/" title="Kubernetes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1282,3 +1436,4 @@
 
   </body>
 </html>
+

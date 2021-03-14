@@ -19,17 +19,6 @@ After some googling, found that collection name with “-” is not one of the b
     </item>
     
     <item>
-      <title>Google Cloud Platform</title>
-      <link>/things-i-learnt/gcp/</link>
-      <pubDate>Mon, 20 Jul 2020 00:02:15 -0400</pubDate>
-      
-      <guid>/things-i-learnt/gcp/</guid>
-      <description>GCP AI/ML Services AI Building Blocks  AI through simple REST calls    Sight
- Vision API : Derive insights from images Video API : content discovery and engaging video experiences    Conversation
- Dialogflow : to build virtual chat agents and conversational experiences Cloud Text-to-Speech API : to convert text to human like speech using Wavenet voices Cloud Speech-to-Text API : to convert speech to text    Language</description>
-    </item>
-    
-    <item>
       <title>PostgreSQL</title>
       <link>/things-i-learnt/postgresql/</link>
       <pubDate>Mon, 03 Aug 2020 00:16:39 -0400</pubDate>

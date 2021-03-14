@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Cloud Platform on VR</title>
+    <link>/cloud-native/gcp/</link>
+    <description>Recent content in Google Cloud Platform on VR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 20 Jul 2020 00:02:15 -0400</lastBuildDate><atom:link href="/cloud-native/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI/ML Services</title>
+      <link>/cloud-native/gcp/gcp-aiml/</link>
+      <pubDate>Mon, 20 Jul 2020 00:02:15 -0400</pubDate>
+      
+      <guid>/cloud-native/gcp/gcp-aiml/</guid>
+      <description>GCP AI/ML Services AI Building Blocks  AI through simple REST calls    Sight
+ Vision API : Derive insights from images Video API : content discovery and engaging video experiences    Conversation
+ Dialogflow : to build virtual chat agents and conversational experiences Cloud Text-to-Speech API : to convert text to human like speech using Wavenet voices Cloud Speech-to-Text API : to convert speech to text    Language</description>
+    </item>
+    
+  </channel>
+</rss>

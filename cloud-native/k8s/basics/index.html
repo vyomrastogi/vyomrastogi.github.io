@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Java Related :: VR</title>
+    <title>Basics :: VR</title>
 
     
     <link href="/css/nucleus.css?1615760030" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/java-related/">
+  <body class="" data-url="/cloud-native/k8s/basics/">
     <nav id="sidebar" class="">
 
 
@@ -221,8 +221,8 @@
   
     
     <li data-nav-id="/java-related/" title="Java Related" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/java-related/">
@@ -571,7 +571,7 @@
   
     
     <li data-nav-id="/cloud-native/" title="Cloud Native" class="dd-item 
-        
+        parent
         
         
         ">
@@ -600,7 +600,7 @@
   
     
     <li data-nav-id="/cloud-native/k8s/" title="Kubernetes" class="dd-item 
-        
+        parent
         
         
         ">
@@ -626,7 +626,7 @@
  
   
     
-      <li data-nav-id="/cloud-native/k8s/basics/" title="Basics" class="dd-item ">
+      <li data-nav-id="/cloud-native/k8s/basics/" title="Basics" class="dd-item active">
         <a href="/cloud-native/k8s/basics/">
         Basics
         
@@ -756,7 +756,19 @@
             
           
           
-            <a href='/'>A Blog</a> > Java Related
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>A Blog</a> > <a href='/cloud-native/'>Cloud Native</a> > <a href='/cloud-native/k8s/'>Kubernetes</a> > Basics
+          
+        
+          
+        
           
         
           
@@ -767,7 +779,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#kubernetes">Kubernetes</a>
+      <ul>
+        <li><a href="#what">What?</a></li>
+        <li><a href="#why">Why?</a></li>
+        <li><a href="#how">How?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -783,21 +805,46 @@
           
             <h1>
               
-              Java Related
+              Basics
             </h1>
           
 
         
 
 
+<h2 id="kubernetes">Kubernetes</h2>
+<h3 id="what">What?</h3>
+<p>Kubernetes is a container orchestration or container management tool.
+From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">K8s.io</a>,</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="why">Why?</h3>
+<p>Kubernetes helps in container management and provides with a framework to support multiple features of distributed, resilient and scalable system.</p>
+<p>It provides support for</p>
+<ul>
+<li>load-balancing and service discovery</li>
+<li>various storage mount options like local, nas or public cloud offerings</li>
+<li>automatic deployments and rollback (<em>canary deployments</em>)</li>
+<li>secret and configuration managements</li>
+</ul>
+<h3 id="how">How?</h3>
+<p>Main components of Kubernetes</p>
+<ol>
+<li>API Server</li>
+<li>etcd</li>
+<li>Scheduler</li>
+<li>Controller</li>
+<li>Container Runtime</li>
+<li>kublet</li>
+</ol>
 
-	<p>Notes taken while revisiting Core Java and various related topics</p>
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -933,7 +980,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -946,9 +992,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1163,6 +1206,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1178,6 +1222,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1190,6 +1235,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1209,6 +1255,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1249,10 +1298,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/be-developer-roadmap/internet-basics/http/" title="Http"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud-native/k8s/" title="Kubernetes"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/java-related/basics/" title="Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/cloud-native/gcp/" title="Google Cloud Platform" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1282,3 +1331,4 @@
 
   </body>
 </html>
+
