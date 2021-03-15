@@ -38,21 +38,16 @@
   </url>
   
   <url>
-    <loc>/cloud-native/k8s/basics/</loc>
+    <loc>/cloud-native/cf-cli/</loc>
   </url>
   
   <url>
-    <loc>/cloud-native/k8s/</loc>
+    <loc>/cloud-native/k8s/basics/</loc>
   </url>
   
   <url>
     <loc>/things-i-learnt/postgresql/</loc>
     <lastmod>2020-08-03T00:16:39-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cloud-native/gcp/</loc>
-    <lastmod>2020-07-20T00:02:15-04:00</lastmod>
   </url>
   
   <url>
@@ -71,6 +66,15 @@
   </url>
   
   <url>
+    <loc>/cloud-native/k8s/</loc>
+  </url>
+  
+  <url>
+    <loc>/cloud-native/gcp/</loc>
+    <lastmod>2020-07-20T00:02:15-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/java-related/java-garbage-collection/</loc>
     <lastmod>2020-07-04T21:23:27-04:00</lastmod>
   </url>
@@ -83,10 +87,6 @@
   <url>
     <loc>/be-developer-roadmap/internet-basics/browsers/</loc>
     <lastmod>2020-06-07T12:47:16-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cloud-native/cf-cli/</loc>
   </url>
   
   <url>

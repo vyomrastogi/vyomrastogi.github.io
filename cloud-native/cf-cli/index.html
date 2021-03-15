@@ -12,21 +12,21 @@
     <title>Cloud Foundry :: VR</title>
 
     
-    <link href="/css/nucleus.css?1615771218" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1615771218" rel="stylesheet">
-    <link href="/css/hybrid.css?1615771218" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615771218" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615771218" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615771218" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1615771218" rel="stylesheet">
-    <link href="/css/theme.css?1615771218" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1615771218" rel="stylesheet">
+    <link href="/css/nucleus.css?1615771737" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1615771737" rel="stylesheet">
+    <link href="/css/hybrid.css?1615771737" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615771737" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615771737" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615771737" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1615771737" rel="stylesheet">
+    <link href="/css/theme.css?1615771737" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1615771737" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1615771218" rel="stylesheet">
+    <link href="/css/theme-blue.css?1615771737" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1615771218"></script>
+    <script src="/js/jquery-3.3.1.min.js?1615771737"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -662,6 +662,27 @@
  
   
     
+      <li data-nav-id="/cloud-native/cf-cli/" title="Cloud Foundry" class="dd-item active">
+        <a href="/cloud-native/cf-cli/">
+        Cloud Foundry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/cloud-native/k8s/" title="Kubernetes" class="dd-item 
         
         
@@ -689,7 +710,7 @@
  
   
     
-      <li data-nav-id="/cloud-native/k8s/basics/" title="Basics" class="dd-item ">
+      <li data-nav-id="/cloud-native/k8s/basics/" title="Kubernetes" class="dd-item ">
         <a href="/cloud-native/k8s/basics/">
         Basics
         
@@ -767,27 +788,6 @@
 
             
           
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/cloud-native/cf-cli/" title="Cloud Foundry" class="dd-item active">
-        <a href="/cloud-native/cf-cli/">
-        Cloud Foundry
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
         
         </ul>
               
@@ -857,7 +857,11 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#cf-plugins">CF Plugins</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -880,7 +884,135 @@
         
 
 
+<ul>
+<li>
+<p>How to login to CF using cli : <code>cf login -a &lt;https://api.address&gt; -u &lt;username&gt; -p &lt;password&gt;</code></p>
+<ul>
+<li>To bypass ssl validation during login : <code>cf login -a &lt;https://api.address&gt; -u &lt;username&gt; -p &lt;password&gt; --skip-ssl-validation</code></li>
+</ul>
+</li>
+<li>
+<p>For switching between space and organization :</p>
+<pre><code>cf target -s &lt;space-name&gt;
+cf target -o &lt;organization-name&gt;
+</code></pre></li>
+<li>
+<p>To review current target configuration : <code>cf target</code></p>
+</li>
+<li>
+<p>How to push an application to cf</p>
+<ul>
+<li>Navigate to code directory and execute :
+<code>cf push &lt;app name&gt; --random-route --no-start -m &lt;memory allocation&gt; -i &lt;number of instances&gt;</code></li>
+<li>This will push an app with given name and memory on a random route and scale app to <code>i</code> instances</li>
+<li><strong>NOTE</strong> : <code>--no-start</code> can be added when app should just be packaged and not started. This is especially usefull when app is required to be bound to services for it to work properly. This way a restage or restart of app is not required</li>
+<li><code>-p &lt;path to jar&gt;</code> can be added to push a specific jar as app</li>
+<li>For starting application: <code>cf start &lt;app name&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>How to view events : <code>cf events &lt;appname&gt;</code></p>
+</li>
+<li>
+<p>For Tailing logs : <code>cf logs &lt;app name&gt;</code></p>
+<ul>
+<li>add <code>--recent</code> for most recent logs</li>
+</ul>
+</li>
+<li>
+<p>For getting all detailed configuration of apps deployed in cf space and org</p>
+<ul>
+<li>Target the space and org</li>
+<li><code>cf curl &quot;v2/apps&quot;</code></li>
+<li><code>cf curl &quot;v2/apps/&lt;app metadata.guid&gt;/stats</code> For detailed stats of the app</li>
+<li>For more details : <a href="http://apidocs.cloudfoundry.org">http://apidocs.cloudfoundry.org</a></li>
+</ul>
+</li>
+<li>
+<p>For scaling application : <code>cf scale &lt;appname&gt; -m &lt;memory allocation&gt; -i &lt;integer - number of instances&gt;</code></p>
+<ul>
+<li>scaling memory requires restart of application and hence can cause downtime</li>
+<li>scaling instance doesnt require restart</li>
+<li><em>PCF</em> auto recovers failing instances of an application</li>
+</ul>
+</li>
+<li>
+<p>For creating new service from Marketplace:</p>
+<pre><code>cf marketplace
+cf create-service &lt;marketplace place service name&gt; &lt;plan&gt; &lt;user service name&gt;  
+cf bind-service &lt;appaname&gt; &lt;user service name&gt;
+cf restart &lt;appname&gt;
+</code></pre></li>
+<li>
+<p>Converting the app into user provided service : <code>cf create-user-provided-service &lt;service name/app name&gt; -p &lt;uri&gt;</code></p>
+</li>
+<li>
+<p>Manifest can be used to define the bound services, memory, instances, package path location etc</p>
+<ul>
+<li>For creating a manifest from cf cli: <code>cf create-app-manifest &lt;app name&gt; -p &lt;file name &gt;</code></li>
+<li>sample filename = ./manifest.yml</li>
+</ul>
+</li>
+<li>
+<p>For creating log drain service, we need the log drain url of service being used, like splunk, papertrail or any logging service</p>
+<ul>
+<li>to bind a log drain service <code>cf create-user-provided-service &lt;log drain service name&gt; -l syslog://&lt;log drain url&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>Blue-Green Deployments</p>
+<ul>
+<li>For finding the correct routes of app <code>cf routes</code></li>
+<li>Push the app with different name and different subdomain : <code>cf push &lt;name v2&gt; -p &lt;package path&gt; -m&lt;memory&gt; -n&lt;subdomain different than current prod&gt; --no-start</code></li>
+<li>bind to required services</li>
+<li>map new route <code>cf map-route &lt;name v2&gt; &lt;domain&gt; -n &lt;subdomain prod one&gt;</code></li>
+<li>For removing old version : <code>cf unmap-route &lt;name v1&gt; &lt;domaine&gt; -n &lt;subdomain&gt;</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>PCF NOTE</strong></p>
+<pre><code>Metrics : http://docs.pivotal.io/pcf-metrics/1-3/using.html```
 
+*To provide particular buildpack during push* 
+cf push &lt;appname&gt; -p &lt;package location&gt; -b &lt;buildpack location&gt;
+
+*For setting JRE version* 
+cf set-env &lt;appname&gt; JBP_CONFIG_OPEN_JDK_JRE &quot;&lt;jre: &lt; version: 1.8.0_45 &gt;&gt;&quot;
+We need to restage app after this change 
+cf restage &lt;appname&gt;
+
+*For pushing service broker* 
+cf push &lt;app name&gt; ... 
+
+cf set-env &lt;app name&gt; SERVICE_ID &lt;unique id&gt;
+cf set-env &lt;app name&gt; SERVICE_NAME &lt;unique Name&gt;
+cf set-env &lt;app name&gt; PLAN_ID &lt;plan name&gt;
+
+
+Start app 
+Register the service broker
+cf create-service-broker &lt;unique broker name&gt; &lt;username&gt; &lt;passowrd&gt; &lt;url&gt; --space-scoper
+
+
+
+*******************************************************************
+```Cloud Metrics 
+
+cf list-plugin-repos 
+--&gt; to List the available plugins - CF-Community should come up 
+
+to install cf TOP plugin - powerful tool for health monitoring. 
+cf install-plugin -r CF-Community &quot;top&quot; 
+</code></pre><h2 id="cf-plugins">CF Plugins</h2>
+<p><a href="https://github.com/ECSTeam/do-all">do-all</a></p>
+<pre><code>This plugin can run any cli command for all apps deployed in the particular targetted space.
+To install : cf install-plugin do-all -r &quot;CF-Community&quot; 
+To run : cf do-all COMMAND ARGS (example : cf do-all restage &lt;&gt; - where &lt;&gt; signifies all applications in targetted space)
+</code></pre><p><a href="https://github.com/ECSTeam/cloudfoundry-top-plugin">top</a></p>
+<pre><code>The best monitoring plugin out there. Shows an interactive view to monitor complete health of Cloud Foundry orgs,space,apps and routes
+To install : cf install-plugin -r CF-Community &quot;top&quot;
+To run : cf top
+</code></pre>
 
 <footer class="footline">
 	
@@ -1308,6 +1440,23 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1366,23 +1515,6 @@
                     
             
         
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -1399,7 +1531,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/cloud-native/gcp/gcp-aiml/" title="AI/ML Services"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/cloud-native/" title="Cloud Native"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/cloud-native/k8s/" title="Kubernetes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1412,19 +1544,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615771218"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615771218"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615771218"></script>
-    <script src="/js/jquery.sticky.js?1615771218"></script>
-    <script src="/js/featherlight.min.js?1615771218"></script>
-    <script src="/js/highlight.pack.js?1615771218"></script>
+    <script src="/js/clipboard.min.js?1615771737"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615771737"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615771737"></script>
+    <script src="/js/jquery.sticky.js?1615771737"></script>
+    <script src="/js/featherlight.min.js?1615771737"></script>
+    <script src="/js/highlight.pack.js?1615771737"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615771218"></script>
-    <script src="/js/learn.js?1615771218"></script>
-    <script src="/js/hugo-learn.js?1615771218"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615771737"></script>
+    <script src="/js/learn.js?1615771737"></script>
+    <script src="/js/hugo-learn.js?1615771737"></script>
 
-    <link href="/mermaid/mermaid.css?1615771218" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1615771218"></script>
+    <link href="/mermaid/mermaid.css?1615771737" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1615771737"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

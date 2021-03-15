@@ -73,14 +73,26 @@ How does Internet work? Internet is global network of physical cables/optical fi
     </item>
     
     <item>
-      <title>Basics</title>
+      <title>Cloud Foundry</title>
+      <link>/cloud-native/cf-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloud-native/cf-cli/</guid>
+      <description>How to login to CF using cli : cf login -a &amp;lt;https://api.address&amp;gt; -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt;
+ To bypass ssl validation during login : cf login -a &amp;lt;https://api.address&amp;gt; -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt; --skip-ssl-validation    For switching between space and organization :
+cf target -s &amp;lt;space-name&amp;gt; cf target -o &amp;lt;organization-name&amp;gt;   To review current target configuration : cf target
+  How to push an application to cf</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
       <link>/cloud-native/k8s/basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/cloud-native/k8s/basics/</guid>
-      <description>Kubernetes What? Kubernetes is a container orchestration or container management tool. From K8s.io,
-   Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
-   Why? Kubernetes helps in container management and provides with a framework to support multiple features of distributed, resilient and scalable system.</description>
+      <description>What? Kubernetes is a container orchestration or container management tool. From K8s.io,
+ Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
+ Why? Kubernetes helps in container management and provides with a framework to support multiple features of distributed, resilient and scalable system.</description>
     </item>
     
     <item>
@@ -134,15 +146,6 @@ It mainly consists of
     </item>
     
     <item>
-      <title>Cloud Foundry</title>
-      <link>/cloud-native/cf-cli/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/cloud-native/cf-cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Elasticsearch Install Fest</title>
       <link>/things-i-learnt/elk-installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -178,7 +181,7 @@ It mainly consists of
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/things-i-learnt/influx-db/</guid>
-      <description>Influx DB InfluxDB is a custom high-performance data store written specifically for time series data. It allows for high throughput ingest, compression and real-time querying of that same data.
+      <description>InfluxDB is a custom high-performance data store written specifically for time series data. It allows for high throughput ingest, compression and real-time querying of that same data.
 Influx SQL    Action CLI Command     Launch Influx CLI influx   Create Database CREATE DATABASE databasename   Create User CREATE USER username WITH PASSWORD &amp;lsquo;userpassword&amp;rsquo; WITH privileges   Drop Series drop series from measurementname    Influx line protocol input : measurement,field name=field value,field name 1=field value 1SPACEtag name=tag value,tag name1 =tag value1SPACEtimestamp</description>
     </item>
     

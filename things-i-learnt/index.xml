@@ -43,7 +43,7 @@ After some googling, found that collection name with “-” is not one of the b
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/things-i-learnt/influx-db/</guid>
-      <description>Influx DB InfluxDB is a custom high-performance data store written specifically for time series data. It allows for high throughput ingest, compression and real-time querying of that same data.
+      <description>InfluxDB is a custom high-performance data store written specifically for time series data. It allows for high throughput ingest, compression and real-time querying of that same data.
 Influx SQL    Action CLI Command     Launch Influx CLI influx   Create Database CREATE DATABASE databasename   Create User CREATE USER username WITH PASSWORD &amp;lsquo;userpassword&amp;rsquo; WITH privileges   Drop Series drop series from measurementname    Influx line protocol input : measurement,field name=field value,field name 1=field value 1SPACEtag name=tag value,tag name1 =tag value1SPACEtimestamp</description>
     </item>
     
