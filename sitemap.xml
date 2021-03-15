@@ -71,11 +71,6 @@
   </url>
   
   <url>
-    <loc>/things-i-learnt/scala/</loc>
-    <lastmod>2020-12-27T23:23:23-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/java-related/java-garbage-collection/</loc>
     <lastmod>2020-07-04T21:23:27-04:00</lastmod>
   </url>
@@ -95,6 +90,10 @@
   </url>
   
   <url>
+    <loc>/things-i-learnt/elk-installation/</loc>
+  </url>
+  
+  <url>
     <loc>/spring/</loc>
     <lastmod>2021-03-14T17:02:02-04:00</lastmod>
   </url>
@@ -110,6 +109,10 @@
   </url>
   
   <url>
+    <loc>/things-i-learnt/influx-db/</loc>
+  </url>
+  
+  <url>
     <loc>/cloud-native/</loc>
     <lastmod>2021-03-14T17:29:05-04:00</lastmod>
   </url>
@@ -117,6 +120,15 @@
   <url>
     <loc>/java-related/java-collections/</loc>
     <lastmod>2020-08-02T17:21:11-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/things-i-learnt/window-git-util/</loc>
+  </url>
+  
+  <url>
+    <loc>/things-i-learnt/scala/</loc>
+    <lastmod>2020-12-27T23:23:23-05:00</lastmod>
   </url>
   
   <url>
@@ -132,18 +144,6 @@
   <url>
     <loc>/be-developer-roadmap/internet-basics/</loc>
     <lastmod>2020-06-07T23:54:22-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/things-i-learnt/elk-installation/</loc>
-  </url>
-  
-  <url>
-    <loc>/things-i-learnt/influx-db/</loc>
-  </url>
-  
-  <url>
-    <loc>/things-i-learnt/window-git-util/</loc>
   </url>
   
   <url>
