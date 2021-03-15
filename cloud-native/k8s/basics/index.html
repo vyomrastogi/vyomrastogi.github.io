@@ -12,21 +12,21 @@
     <title>Basics :: VR</title>
 
     
-    <link href="/css/nucleus.css?1615760030" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1615760030" rel="stylesheet">
-    <link href="/css/hybrid.css?1615760030" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615760030" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615760030" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615760030" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1615760030" rel="stylesheet">
-    <link href="/css/theme.css?1615760030" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1615760030" rel="stylesheet">
+    <link href="/css/nucleus.css?1615770937" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1615770937" rel="stylesheet">
+    <link href="/css/hybrid.css?1615770937" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615770937" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615770937" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615770937" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1615770937" rel="stylesheet">
+    <link href="/css/theme.css?1615770937" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1615770937" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1615760030" rel="stylesheet">
+    <link href="/css/theme-blue.css?1615770937" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1615760030"></script>
+    <script src="/js/jquery-3.3.1.min.js?1615770937"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -499,6 +499,69 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/things-i-learnt/elk-installation/" title="" class="dd-item ">
+        <a href="/things-i-learnt/elk-installation/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/things-i-learnt/influx-db/" title="" class="dd-item ">
+        <a href="/things-i-learnt/influx-db/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/things-i-learnt/window-git-util/" title="" class="dd-item ">
+        <a href="/things-i-learnt/window-git-util/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -521,7 +584,7 @@
         
         ">
       <a href="/spring/">
-          <b>4. <b>Spring
+          <b>4. </b>Spring
           
       </a>
       
@@ -704,6 +767,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cloud-native/cf-cli/" title="Cloud Foundry" class="dd-item ">
+        <a href="/cloud-native/cf-cli/">
+        Cloud Foundry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -786,6 +870,7 @@
         <li><a href="#what">What?</a></li>
         <li><a href="#why">Why?</a></li>
         <li><a href="#how">How?</a></li>
+        <li><a href="#pods">Pods</a></li>
       </ul>
     </li>
   </ul>
@@ -842,7 +927,22 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
 <li>Container Runtime</li>
 <li>kublet</li>
 </ol>
-
+<h3 id="pods">Pods</h3>
+<p>Pods are the smallest object that can be created in Kubernetes.</p>
+<p>Sample configuration</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e">#always present</span>
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1 </span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Pod</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">my-pod</span>
+  <span style="color:#f92672">labels</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">myapp </span>
+    <span style="color:#f92672">tier</span>: <span style="color:#ae81ff">backend</span>
+<span style="color:#f92672">spec</span>: 
+  <span style="color:#f92672">containers</span>: 
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-container</span>
+      <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx</span>
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -1166,22 +1266,6 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1198,6 +1282,19 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1205,37 +1302,6 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1255,9 +1321,6 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1282,6 +1345,107 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
                     
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -1311,19 +1475,19 @@ From <a href="https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/">
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615760030"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615760030"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615760030"></script>
-    <script src="/js/jquery.sticky.js?1615760030"></script>
-    <script src="/js/featherlight.min.js?1615760030"></script>
-    <script src="/js/highlight.pack.js?1615760030"></script>
+    <script src="/js/clipboard.min.js?1615770937"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615770937"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615770937"></script>
+    <script src="/js/jquery.sticky.js?1615770937"></script>
+    <script src="/js/featherlight.min.js?1615770937"></script>
+    <script src="/js/highlight.pack.js?1615770937"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615760030"></script>
-    <script src="/js/learn.js?1615760030"></script>
-    <script src="/js/hugo-learn.js?1615760030"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615770937"></script>
+    <script src="/js/learn.js?1615770937"></script>
+    <script src="/js/hugo-learn.js?1615770937"></script>
 
-    <link href="/mermaid/mermaid.css?1615760030" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1615760030"></script>
+    <link href="/mermaid/mermaid.css?1615770937" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1615770937"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

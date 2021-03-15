@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Graalvm :: VR</title>
+    <title> :: VR</title>
 
     
     <link href="/css/nucleus.css?1615770937" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/java-related/graalvm/">
+  <body class="" data-url="/things-i-learnt/elk-installation/">
     <nav id="sidebar" class="">
 
 
@@ -221,7 +221,7 @@
   
     
     <li data-nav-id="/java-related/" title="Java Related" class="dd-item 
-        parent
+        
         
         
         ">
@@ -352,7 +352,7 @@
  
   
     
-      <li data-nav-id="/java-related/graalvm/" title="Graalvm" class="dd-item active">
+      <li data-nav-id="/java-related/graalvm/" title="Graalvm" class="dd-item ">
         <a href="/java-related/graalvm/">
         Graalvm
         
@@ -381,7 +381,7 @@
   
     
     <li data-nav-id="/things-i-learnt/" title="Things I Learnt" class="dd-item 
-        
+        parent
         
         
         ">
@@ -508,7 +508,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/elk-installation/" title="" class="dd-item ">
+      <li data-nav-id="/things-i-learnt/elk-installation/" title="" class="dd-item active">
         <a href="/things-i-learnt/elk-installation/">
         
         
@@ -844,7 +844,7 @@
             
           
           
-            <a href='/'>A Blog</a> > <a href='/java-related/'>Java Related</a> > Graalvm
+            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > 
           
         
           
@@ -859,11 +859,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#how-to-install-elasticsearch">How to Install Elasticsearch</a>
       <ul>
         <li></li>
       </ul>
     </li>
+    <li><a href="#how-to-install-kibana">How to Install Kibana</a></li>
   </ul>
 </nav>
     </div>
@@ -881,31 +882,83 @@
           
             <h1>
               
-              Graalvm
+              
             </h1>
           
 
         
 
 
+<h2 id="how-to-install-elasticsearch">How to Install Elasticsearch</h2>
 <ul>
-<li>An alternate JVM</li>
-<li>An alternate java compiler</li>
-<li>Provides a native compiler, hence application can run without JVM</li>
-</ul>
-<p>Steps to Install</p>
+<li>install java jdk
+<code>sudo yum install java-1.8.0-openjdk.x86_64</code></li>
+<li>install elasticsearch 6.x
 <ul>
-<li><code>wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz</code></li>
-<li><code>tar -xzvf graalvm-ce-java11-darwin-amd64-20.1.0.tar.gz</code></li>
-<li>Set GraalVM to Path</li>
-<li><code>sudo apt-get install gcc zlib1g-dev</code> to install native image dependencies</li>
-<li><code>gu install native-image</code> to install native image component</li>
-<li><code>native-image &lt;class file&gt;</code> creates a native image with JVM packaged</li>
+<li>Download and install the public signing key
+<code>rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch</code></li>
+<li>Create a file <code>elasticsearch.repo</code> in <code>/etc/yum.repos.d</code> with content</li>
 </ul>
-<h5 id="reference">Reference</h5>
+</li>
+</ul>
+<pre><code>[elasticsearch-6.x] 
+name=Elasticsearch repository for 6.x packages
+baseurl=https://artifacts.elastic.co/packages/6.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+</code></pre><ul>
+<li>install elasticsearch using command
+<code>sudo yum install elasticsearch</code>
 <ul>
-<li><a href="https://www.graalvm.org/getting-started/">https://www.graalvm.org/getting-started/</a></li>
+<li>To setup auto start up at system reboot
+<code>sudo systemctl daemon-reload</code>
+<code>sudo systemctl enable elasticsearch.service</code></li>
 </ul>
+</li>
+<li>update cluster.name</li>
+<li>update data location in &lsquo;/etc/elasticsearch/elasticsearch.yml&rsquo;  to - <code> /app/data/elastic/</code> [optional step]</li>
+<li>update host and port details - <code> host ipaddress and port (9200)</code></li>
+<li>node details
+<ul>
+<li>setup
+<pre><code>node.name
+node.data (true or false based on requirement)
+node.master(true or false based on requirement)
+node.ingest(true or false based on requirement)
+</code></pre></li>
+</ul>
+</li>
+<li>update elasticsearch system configuration to set limitMEMLOCK to infinity, so that the process uses the memory limited by elasticsearch jvm configuration.</li>
+<li>configure jvm options at /etc/elasticsearch/jvm.options for -Xms1g -Xmx1g. Xms represents the initial size of total heap space and Xmx represents the maximum size of total heap space</li>
+</ul>
+<h4 id="how-to-startstop-elasticsearch">How to start/stop Elasticsearch</h4>
+<p><code>sudo systemctl start elasticsearch.service</code>
+<code>sudo systemctl stop elasticsearch.service</code></p>
+<p>####Installation Directory
+Config : <code>etc/elasticsearch/elasticsearch.yml</code>
+Logs : <code>var/logs/elasticsearch/&lt;log file&gt;</code>
+Default Data path : <code>var/lib/elasticsearch</code></p>
+<p>Different Configuration changes made during POC</p>
+<p>path:
+logs: /var/log/elasticsearch
+data: /app/data/elastic</p>
+<h2 id="how-to-install-kibana">How to Install Kibana</h2>
+<p>install kibana 6.x
+Download and install the public signing key
+<code>rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch</code>
+Create a file <code>kibana.repo</code> in <code>/etc/yum.repos.d</code> with content</p>
+<pre><code>[kibana-6.x]
+name=Kibana repository for 6.x packages
+baseurl=https://artifacts.elastic.co/packages/6.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+</code></pre><p>install kibana using <code>sudo yum install kibana</code></p>
 
 
 <footer class="footline">
@@ -1044,7 +1097,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1058,8 +1110,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -1136,23 +1201,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1161,8 +1209,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1178,6 +1224,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1243,6 +1292,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1258,6 +1308,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1428,10 +1481,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/java-related/java-collections/" title="Java Collections"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/things-i-learnt/scala/basics/" title="Basics"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/things-i-learnt/" title="Things I Learnt" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/things-i-learnt/influx-db/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -7,5 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 14 Mar 2021 17:29:05 -0400</lastBuildDate><atom:link href="/cloud-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Foundry</title>
+      <link>/cloud-native/cf-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cloud-native/cf-cli/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

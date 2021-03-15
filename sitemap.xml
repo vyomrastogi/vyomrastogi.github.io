@@ -91,6 +91,10 @@
   </url>
   
   <url>
+    <loc>/cloud-native/cf-cli/</loc>
+  </url>
+  
+  <url>
     <loc>/spring/</loc>
     <lastmod>2021-03-14T17:02:02-04:00</lastmod>
   </url>
@@ -128,6 +132,18 @@
   <url>
     <loc>/be-developer-roadmap/internet-basics/</loc>
     <lastmod>2020-06-07T23:54:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/things-i-learnt/elk-installation/</loc>
+  </url>
+  
+  <url>
+    <loc>/things-i-learnt/influx-db/</loc>
+  </url>
+  
+  <url>
+    <loc>/things-i-learnt/window-git-util/</loc>
   </url>
   
   <url>

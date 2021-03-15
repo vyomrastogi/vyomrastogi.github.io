@@ -28,5 +28,33 @@ After some googling, found that collection name with “-” is not one of the b
  sudo apt update - to refresh package index sudo apt install postgresql-contrib - to install postgresql alongwith additional tools and packages By default, a postgres user is created which can be used to manage postgres. sudo -i -u postgres psql to interact with postgres and \q to exit postgresql prompt createuser --interactive --password postgres-user to create new user createdb demo-db -O postgres-user to create a new db update the pg_hba.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>/things-i-learnt/elk-installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/things-i-learnt/elk-installation/</guid>
+      <description>How to Install Elasticsearch  install java jdk sudo yum install java-1.8.0-openjdk.x86_64 install elasticsearch 6.x  Download and install the public signing key rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch Create a file elasticsearch.repo in /etc/yum.repos.d with content    [elasticsearch-6.x] name=Elasticsearch repository for 6.x packages baseurl=https://artifacts.elastic.co/packages/6.x/yum gpgcheck=1 gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch enabled=1 autorefresh=1 type=rpm-md  install elasticsearch using command sudo yum install elasticsearch  To setup auto start up at system reboot sudo systemctl daemon-reload sudo systemctl enable elasticsearch.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/things-i-learnt/influx-db/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/things-i-learnt/influx-db/</guid>
+      <description>Influx DB InfluxDB is a custom high-performance data store written specifically for time series data. It allows for high throughput ingest, compression and real-time querying of that same data. Influx SQL    Action CLI Command     Launch Influx CLI influx   Create Database CREATE DATABASE databasename   Create User CREATE USER username WITH PASSWORD &amp;lsquo;userpassword&amp;rsquo; WITH privileges   Drop Series drop series from measurementname    Influx line protocol input : measurement,field name=field value,field name 1=field value 1SPACEtag name=tag value,tag name1 =tag value1SPACEtimestamp</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/things-i-learnt/window-git-util/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/things-i-learnt/window-git-util/</guid>
+      <description>to run a git command on all folders in a directory in windows
+@echo off set /p git_command=&amp;#34;Enter git command: &amp;#34; for /d %%i in (.\*) do (	echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ echo &amp;#34;%%i&amp;#34; cd &amp;#34;%%i&amp;#34; echo ----------------------------------------------- echo %git_command% %git_command% echo ----------------------------------------------- echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ cd.. ) </description>
+    </item>
+    
   </channel>
 </rss>
