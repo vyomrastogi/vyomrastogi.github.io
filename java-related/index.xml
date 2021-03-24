@@ -16,7 +16,7 @@
       <description>Java Java is a high level programming language. Main characteristics include
  robust secure platform/os independent object-oriented multi-threaded portable etc.  Java requires both compiler and interpretor to run.
 The compiler converts the source code into byte code. The interpretor interprets this bytecode and excutes the application/logic. Since java is interpreted language, it is platform independent
-Java Virtual Machine or JVM provides an environment to support execution of java bytecode. It compiles a .</description>
+Java Editions  Java Card : Smart card Edition, for chip cards Java ME : Micro Edition, for IOT devices, smart devices Java SE : Standard Edition Java MP : Micro Profile, a subset of Java EE with enough features to run microservices Java EE : Enterprise Edition  JVM Architecture Java Virtual Machine or JVM provides an environment to support execution of java bytecode.</description>
     </item>
     
     <item>
