@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basics :: VR</title>
+    <title>Important Links :: VR</title>
 
     
     <link href="/css/nucleus.css?1637177551" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/things-i-learnt/scala/basics/">
+  <body class="" data-url="/things-i-learnt/exception-troubleshooting/">
     <nav id="sidebar" class="">
 
 
@@ -515,7 +515,7 @@
   
     
     <li data-nav-id="/things-i-learnt/scala/" title="Scala" class="dd-item 
-        parent
+        
         
         
         ">
@@ -541,7 +541,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/scala/basics/" title="Basics" class="dd-item active">
+      <li data-nav-id="/things-i-learnt/scala/basics/" title="Basics" class="dd-item ">
         <a href="/things-i-learnt/scala/basics/">
         Basics
         
@@ -571,7 +571,7 @@
  
   
     
-      <li data-nav-id="/things-i-learnt/exception-troubleshooting/" title="Important Links" class="dd-item ">
+      <li data-nav-id="/things-i-learnt/exception-troubleshooting/" title="Important Links" class="dd-item active">
         <a href="/things-i-learnt/exception-troubleshooting/">
         Important Links
         
@@ -865,13 +865,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > <a href='/things-i-learnt/scala/'>Scala</a> > Basics
-          
-        
+            <a href='/'>A Blog</a> > <a href='/things-i-learnt/'>Things I Learnt</a> > Important Links
           
         
           
@@ -886,8 +880,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#variables">Variables</a></li>
+    <li>
+      <ul>
+        <li><a href="#sslhandshakeexception">SSLHandshakeException</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -905,50 +902,19 @@
           
             <h1>
               
-              Basics
+              Important Links
             </h1>
           
 
         
 
 
-<h2 id="introduction">Introduction</h2>
-<p>An excerpt from <a href="https://en.wikipedia.org/wiki/Scala_(programming_language)">wiki</a></p>
-<blockquote>
-<p><strong>Scala</strong> is a general-purpose programming language providing support for both <strong>object-oriented programming</strong> and <strong>functional programming</strong>. The language has a <strong>strong static type</strong> system. Designed to be <strong>concise</strong>, many of Scala&rsquo;s design decisions are aimed to address criticisms of Java.</p>
-</blockquote>
-<blockquote>
-<p>It is executed in a JVM. <code>.scala</code> file <strong>compiles</strong> to executable <code>byte code</code> by <strong>scala compiler</strong>. Byte Code is executed in JVM on different Operating systems</p>
-</blockquote>
-<h2 id="variables">Variables</h2>
-<p>Two types of variables in scala</p>
-<ul>
-<li><strong>immutable</strong>
-<ul>
-<li>any variable declared as <code>val</code>, can not be re-assigned. It is equivalent to Java <code>final</code> keyword.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  object Variables <span style="color:#f92672">{</span>
-      def <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>args<span style="color:#f92672">:</span> Array<span style="color:#f92672">[</span>String<span style="color:#f92672">]):</span> Unit <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
-      println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">);</span>
-          <span style="color:#75715e">/*
-</span><span style="color:#75715e">          * Immuatable Variables
-</span><span style="color:#75715e">          */</span>
-          val definedInteger <span style="color:#f92672">:</span> Int <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
-          definedInteger <span style="color:#f92672">=</span> 5 <span style="color:#f92672">;</span> <span style="color:#75715e">// gives compilation error, reassignement of val
-</span><span style="color:#75715e"></span>      <span style="color:#f92672">}</span>
-  <span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li><strong>mutable</strong>
-<ul>
-<li>any variable declared as <code>var</code>. It can be reassigned.</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/*
-</span><span style="color:#75715e">  * Mutable Variables
-</span><span style="color:#75715e">  */</span>
-  var mutableInteger <span style="color:#f92672">:</span> Int <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
-  mutableInteger <span style="color:#f92672">=</span> 5 <span style="color:#75715e">// reassignement is allowed
-</span></code></pre></div></li>
-</ul>
+<h3 id="sslhandshakeexception">SSLHandshakeException</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Exception: javax<span style="color:#f92672">.</span><span style="color:#a6e22e">net</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ssl</span><span style="color:#f92672">.</span><span style="color:#a6e22e">SSLHandshakeException</span><span style="color:#f92672">:</span> sun<span style="color:#f92672">.</span><span style="color:#a6e22e">security</span><span style="color:#f92672">.</span><span style="color:#a6e22e">validator</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ValidatorException</span><span style="color:#f92672">:</span> PKIX path building failed<span style="color:#f92672">:</span> 
+    sun<span style="color:#f92672">.</span><span style="color:#a6e22e">security</span><span style="color:#f92672">.</span><span style="color:#a6e22e">provider</span><span style="color:#f92672">.</span><span style="color:#a6e22e">certpath</span><span style="color:#f92672">.</span><span style="color:#a6e22e">SunCertPathBuilderException</span><span style="color:#f92672">:</span> unable to find valid certification path to requested target
+
+</code></pre></div><p><strong>Reason</strong> : jvm might need required certificates</p>
+<p><strong>Possible Solution</strong> : <a href="https://stackoverflow.com/questions/21076179/pkix-path-building-failed-and-unable-to-find-valid-certification-path-to-requ">SO-Solution</a></p>
 
 
 <footer class="footline">
@@ -1298,6 +1264,18 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1306,6 +1284,12 @@
                     
                     
 
+                    
+            
+        
+                    
+            
+        
                     
                         
             
@@ -1334,25 +1318,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1488,10 +1453,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/things-i-learnt/scala/" title="Scala"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/things-i-learnt/scala/basics/" title="Basics"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/things-i-learnt/exception-troubleshooting/" title="Important Links" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/spring/" title="Spring" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

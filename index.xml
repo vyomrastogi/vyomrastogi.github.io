@@ -214,5 +214,15 @@ Influx SQL    Action CLI Command     Launch Influx CLI influx   Create Database 
  wget https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.1.0/graalvm-ce-java11-linux-amd64-20.1.0.tar.gz tar -xzvf graalvm-ce-java11-darwin-amd64-20.1.0.tar.gz Set GraalVM to Path sudo apt-get install gcc zlib1g-dev to install native image dependencies gu install native-image to install native image component native-image &amp;lt;class file&amp;gt; creates a native image with JVM packaged  Reference  https://www.graalvm.org/getting-started/  </description>
     </item>
     
+    <item>
+      <title>Important Links</title>
+      <link>/things-i-learnt/exception-troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/things-i-learnt/exception-troubleshooting/</guid>
+      <description>SSLHandshakeException Exception: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target Reason : jvm might need required certificates
+Possible Solution : SO-Solution</description>
+    </item>
+    
   </channel>
 </rss>
