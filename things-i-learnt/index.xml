@@ -64,7 +64,8 @@ Influx SQL    Action CLI Command     Launch Influx CLI influx   Create Database 
       
       <guid>/things-i-learnt/exception-troubleshooting/</guid>
       <description>SSLHandshakeException Exception: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target Reason : jvm might need required certificates
-Possible Solution : SO-Solution</description>
+Possible Solution : SO-Solution
+How to check for open ports in a unix machine  sudo netstat -tunlp  -t - Show TCP ports. -u - Show UDP ports. -n - Show numerical addresses instead of resolving hosts. -l - Show only listening ports. -p - Show the PID and name of the listener’s process.</description>
     </item>
     
   </channel>

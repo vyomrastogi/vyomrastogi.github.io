@@ -12,21 +12,21 @@
     <title>Important Links :: VR</title>
 
     
-    <link href="/css/nucleus.css?1637177551" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1637177551" rel="stylesheet">
-    <link href="/css/hybrid.css?1637177551" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1637177551" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1637177551" rel="stylesheet">
-    <link href="/css/auto-complete.css?1637177551" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1637177551" rel="stylesheet">
-    <link href="/css/theme.css?1637177551" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1637177551" rel="stylesheet">
+    <link href="/css/nucleus.css?1637706201" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1637706201" rel="stylesheet">
+    <link href="/css/hybrid.css?1637706201" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1637706201" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1637706201" rel="stylesheet">
+    <link href="/css/auto-complete.css?1637706201" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1637706201" rel="stylesheet">
+    <link href="/css/theme.css?1637706201" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1637706201" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1637177551" rel="stylesheet">
+    <link href="/css/theme-blue.css?1637706201" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1637177551"></script>
+    <script src="/js/jquery-3.3.1.min.js?1637706201"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -883,6 +883,7 @@
     <li>
       <ul>
         <li><a href="#sslhandshakeexception">SSLHandshakeException</a></li>
+        <li><a href="#how-to-check-for-open-ports-in-a-unix-machine">How to check for open ports in a unix machine</a></li>
       </ul>
     </li>
   </ul>
@@ -915,6 +916,19 @@
 
 </code></pre></div><p><strong>Reason</strong> : jvm might need required certificates</p>
 <p><strong>Possible Solution</strong> : <a href="https://stackoverflow.com/questions/21076179/pkix-path-building-failed-and-unable-to-find-valid-certification-path-to-requ">SO-Solution</a></p>
+<h3 id="how-to-check-for-open-ports-in-a-unix-machine">How to check for open ports in a unix machine</h3>
+<ul>
+<li><code>sudo</code> <code>netstat -tunlp</code>
+<ul>
+<li><code>-t</code> - Show TCP ports.</li>
+<li><code>-u</code> - Show UDP ports.</li>
+<li><code>-n</code> - Show numerical addresses instead of resolving hosts.</li>
+<li><code>-l</code> - Show only listening ports.</li>
+<li><code>-p</code> - Show the PID and name of the listener’s process. This information is shown only if you run the command as root or sudo user.</li>
+</ul>
+</li>
+<li><code>netstat -tnlp | grep :22</code> - to filter for particular ports</li>
+</ul>
 
 
 <footer class="footline">
@@ -1466,19 +1480,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1637177551"></script>
-    <script src="/js/perfect-scrollbar.min.js?1637177551"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1637177551"></script>
-    <script src="/js/jquery.sticky.js?1637177551"></script>
-    <script src="/js/featherlight.min.js?1637177551"></script>
-    <script src="/js/highlight.pack.js?1637177551"></script>
+    <script src="/js/clipboard.min.js?1637706201"></script>
+    <script src="/js/perfect-scrollbar.min.js?1637706201"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1637706201"></script>
+    <script src="/js/jquery.sticky.js?1637706201"></script>
+    <script src="/js/featherlight.min.js?1637706201"></script>
+    <script src="/js/highlight.pack.js?1637706201"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1637177551"></script>
-    <script src="/js/learn.js?1637177551"></script>
-    <script src="/js/hugo-learn.js?1637177551"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1637706201"></script>
+    <script src="/js/learn.js?1637706201"></script>
+    <script src="/js/hugo-learn.js?1637706201"></script>
 
-    <link href="/mermaid/mermaid.css?1637177551" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1637177551"></script>
+    <link href="/mermaid/mermaid.css?1637706201" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1637706201"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
