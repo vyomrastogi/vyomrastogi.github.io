@@ -12,21 +12,21 @@
     <title>Important Links :: VR</title>
 
     
-    <link href="/css/nucleus.css?1637706201" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1637706201" rel="stylesheet">
-    <link href="/css/hybrid.css?1637706201" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1637706201" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1637706201" rel="stylesheet">
-    <link href="/css/auto-complete.css?1637706201" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1637706201" rel="stylesheet">
-    <link href="/css/theme.css?1637706201" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1637706201" rel="stylesheet">
+    <link href="/css/nucleus.css?1638124019" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1638124019" rel="stylesheet">
+    <link href="/css/hybrid.css?1638124019" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1638124019" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1638124019" rel="stylesheet">
+    <link href="/css/auto-complete.css?1638124019" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1638124019" rel="stylesheet">
+    <link href="/css/theme.css?1638124019" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1638124019" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1637706201" rel="stylesheet">
+    <link href="/css/theme-blue.css?1638124019" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1637706201"></script>
+    <script src="/js/jquery-3.3.1.min.js?1638124019"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -884,6 +884,7 @@
       <ul>
         <li><a href="#sslhandshakeexception">SSLHandshakeException</a></li>
         <li><a href="#how-to-check-for-open-ports-in-a-unix-machine">How to check for open ports in a unix machine</a></li>
+        <li><a href="#how-to-switch-java-versions-easily">How to switch java versions easily</a></li>
       </ul>
     </li>
   </ul>
@@ -916,6 +917,7 @@
 
 </code></pre></div><p><strong>Reason</strong> : jvm might need required certificates</p>
 <p><strong>Possible Solution</strong> : <a href="https://stackoverflow.com/questions/21076179/pkix-path-building-failed-and-unable-to-find-valid-certification-path-to-requ">SO-Solution</a></p>
+<hr>
 <h3 id="how-to-check-for-open-ports-in-a-unix-machine">How to check for open ports in a unix machine</h3>
 <ul>
 <li><code>sudo</code> <code>netstat -tunlp</code>
@@ -929,7 +931,14 @@
 </li>
 <li><code>netstat -tnlp | grep :22</code> - to filter for particular ports</li>
 </ul>
-
+<hr>
+<h3 id="how-to-switch-java-versions-easily">How to switch java versions easily</h3>
+<p>Nice discussion here : <a href="https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-macos">so-link</a></p>
+<p><em>excerpt</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">alias java17<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=`/usr/libexec/java_home -v 17`; java -version&#34;</span>
+alias java11<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version&#34;</span>
+alias java8<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version&#34;</span>
+</code></pre></div>
 
 <footer class="footline">
 	
@@ -1480,19 +1489,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1637706201"></script>
-    <script src="/js/perfect-scrollbar.min.js?1637706201"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1637706201"></script>
-    <script src="/js/jquery.sticky.js?1637706201"></script>
-    <script src="/js/featherlight.min.js?1637706201"></script>
-    <script src="/js/highlight.pack.js?1637706201"></script>
+    <script src="/js/clipboard.min.js?1638124019"></script>
+    <script src="/js/perfect-scrollbar.min.js?1638124019"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1638124019"></script>
+    <script src="/js/jquery.sticky.js?1638124019"></script>
+    <script src="/js/featherlight.min.js?1638124019"></script>
+    <script src="/js/highlight.pack.js?1638124019"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1637706201"></script>
-    <script src="/js/learn.js?1637706201"></script>
-    <script src="/js/hugo-learn.js?1637706201"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1638124019"></script>
+    <script src="/js/learn.js?1638124019"></script>
+    <script src="/js/hugo-learn.js?1638124019"></script>
 
-    <link href="/mermaid/mermaid.css?1637706201" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1637706201"></script>
+    <link href="/mermaid/mermaid.css?1638124019" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1638124019"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
